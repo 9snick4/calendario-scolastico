@@ -6,6 +6,15 @@ materie_bp = Blueprint("materie", __name__, url_prefix="/materie")
 
 @materie_bp.route("/", methods=["GET", "POST"])
 def lista_materie():
+    """
+    GET  /materie/ — mostra tutte le materie.
+    POST /materie/ (salva_modifiche) — aggiorna il flag is_professionale per
+                    tutte le materie in un colpo solo.
+    POST /materie/ (nome) — crea una nuova materia.
+
+    CORNER CASE: se viene inserita una materia con lo stesso nome di una
+    gia' esistente, il form mostra un avviso e non crea duplicati.
+    """
     materie = Materia.query.order_by(Materia.nome).all()
 
     # 🔥 Se clicco SALVA (aggiornamento multiplo)
@@ -37,6 +46,11 @@ def lista_materie():
 
 @materie_bp.route("/delete/<int:id>")
 def delete_materia(id):
+    """
+    Elimina una materia. ATTENZIONE: se la materia e' associata a una o piu'
+    classi (MateriaClasse), SQLAlchemy sollevera' un IntegrityError a meno che
+    le associazioni non vengano rimosse prima.
+    """
     materia = Materia.query.get_or_404(id)
     db.session.delete(materia)
     db.session.commit()

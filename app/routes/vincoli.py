@@ -30,6 +30,7 @@ vincoli_bp = Blueprint("vincoli", __name__, url_prefix="/vincoli")
 # INDEX
 @vincoli_bp.route("/")
 def index():
+    """Reindirizza all'elenco dei vincoli docente."""
     return redirect(url_for("vincoli.vincoli_docenti"))
 
 
@@ -38,6 +39,15 @@ def index():
 # ---------------------------------------------------------
 @vincoli_bp.route("/docenti", methods=["GET", "POST"])
 def vincoli_docenti():
+    """
+    GET  /vincoli/docenti     — mostra i vincoli orari di tutti i docenti.
+    POST /vincoli/docenti     — aggiunge un nuovo vincolo orario.
+
+    Un vincolo docente indica la fascia oraria in cui il docente e'
+    disponibile in un dato giorno. La logica e' a WHITELIST: se un docente
+    ha almeno un vincolo, deve avere un vincolo esplicito per ogni giorno
+    in cui si vuole che insegni.
+    """
     docenti = Docente.query.order_by(Docente.nome_docente).all()
     vincoli = VincoloDocente.query.order_by(VincoloDocente.docente_id).all()
 
@@ -64,6 +74,9 @@ def vincoli_docenti():
 
 @vincoli_bp.route("/docenti/delete/<int:id>")
 def delete_vincolo_docente(id):
+    """
+    Elimina un vincolo orario docente.
+    """
     vincolo = VincoloDocente.query.get_or_404(id)
     db.session.delete(vincolo)
     db.session.commit()
@@ -76,6 +89,13 @@ def delete_vincolo_docente(id):
 # ---------------------------------------------------------
 @vincoli_bp.route("/giorni_speciali", methods=["GET", "POST"])
 def giorni_speciali():
+    """
+    GET  /vincoli/giorni_speciali  — mostra i giorni speciali (con filtro per classe).
+    POST /vincoli/giorni_speciali  — aggiunge un nuovo giorno speciale.
+
+    Un giorno speciale piazza ore di una materia in una data precisa,
+    poi blocca tutti gli slot rimanenti della giornata.
+    """
     classi = Classe.query.order_by(Classe.nome_classe).all()
     materie = Materia.query.order_by(Materia.nome).all()
     docenti = Docente.query.order_by(Docente.nome_docente).all()
@@ -121,6 +141,10 @@ def giorni_speciali():
 
 @vincoli_bp.route("/giorni_speciali/edit/<int:id>", methods=["GET", "POST"])
 def edit_giorno_speciale(id):
+    """
+    GET  — mostra il form di modifica di un giorno speciale.
+    POST — salva le modifiche al giorno speciale.
+    """
     giorno = GiornoSpeciale.query.get_or_404(id)
     classi = Classe.query.order_by(Classe.nome_classe).all()
     materie = Materia.query.order_by(Materia.nome).all()

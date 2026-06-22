@@ -1,5 +1,5 @@
 # ============================================================
-#   ORDINARY PLACEMENT — VERSIONE DEFINITIVA PATCHATA
+#   ORDINARY PLACEMENT -- VERSIONE DEFINITIVA PATCHATA
 #   Protezione giorni speciali + giorni fissi + anti‑buco
 # ============================================================
 
@@ -9,18 +9,20 @@ from app.utils.orario_utils import piazza_blocco
 
 def prepara_classi_data(classi_info):
     """
-    Converte classi_info in una lista di cd (class_data) per il motore ordinario.
+    Converte classi_info (dizionario prodotto da prepara_classi) in una
+    lista di strutture cd (class_data) utilizzate dal motore ordinario.
+
     Ogni cd contiene:
-    - griglie
-    - materie_attive
-    - libero
-    - giorni_per_key
-    - settimane_classe
-    - tipo_giorno
-    - settimane
-    - settimana_per_data
-    - classe
-    - ore_g
+    - griglie           : dict settimana -> griglia settimanale
+    - materie_attive    : dict materia_id -> info materia
+    - libero            : dict (data, h) -> bool
+    - giorni_per_key    : dict settimana -> lista giorni
+    - settimane_classe  : struttura originale
+    - tipo_giorno       : dict data -> tipo ("STAGE","FESTA","SPECIALE",None)
+    - settimane         : dict settimana -> lista date
+    - settimana_per_data: dict data -> chiave settimana
+    - classe            : oggetto Classe
+    - ore_g             : numero massimo di ore giornaliere
     """
 
     classi_data = []
@@ -82,6 +84,16 @@ def prepara_classi_data(classi_info):
 
 
 def ordinary_placement(cd, docente_ok_wrapper):
+    """
+    Punto di ingresso del motore ordinario per una singola classe.
+
+    Esegue in sequenza:
+    1. fase1_calcolo_ore_settimanali  -- quante ore/settimana per materia
+    2. fase2_piazzamento_forte        -- blocchi interi con vincolo ore_minime
+    3. fase3_riempimento_soft         -- ore residue slot per slot
+    4. fase4_riempimento_ultrasoft    -- secondo tentativo soft senza limiti blocco
+    5. report_classe                  -- stampa statistica finale
+    """
     fase1_calcolo_ore_settimanali(cd)
     fase2_piazzamento_forte(cd, docente_ok_wrapper)
     fase3_riempimento_soft(cd, docente_ok_wrapper)
@@ -90,10 +102,17 @@ def ordinary_placement(cd, docente_ok_wrapper):
 
 
 # ============================================================
-#   FASE 1 — CALCOLO ORE SETTIMANALI
+#   FASE 1 -- CALCOLO ORE SETTIMANALI
 # ============================================================
 
 def fase1_calcolo_ore_settimanali(cd):
+    """
+    Calcola la quota settimanale teorica di ogni materia.
+
+    Formula: ore_settimanali = max(1, round(ore_annuali / num_settimane)).
+    Le materie con ore_annuali < 30 ottengono 1 ora/settimana.
+    Salva anche il valore _blocchi_minimi (= ore_minime_consecutive).
+    """
     settimane = len(cd.get("settimane", {}))
 
     for _, info in cd["materie_attive"].items():
@@ -108,10 +127,18 @@ def fase1_calcolo_ore_settimanali(cd):
 
 
 # ============================================================
-#   FASE 2 — PIAZZAMENTO FORTE
+#   FASE 2 -- PIAZZAMENTO FORTE
 # ============================================================
 
 def fase2_piazzamento_forte(cd, docente_ok_wrapper):
+    """
+    Prima fase di piazzamento: tenta di mettere blocchi INTERI per ogni
+    materia, settimana per settimana.
+
+    Le materie vengono ordinate per priorita' decrescente:
+    ore/settimana -> blocchi_minimi -> ore_annuali.
+    Per ogni settimana, per ogni materia, chiama _piazza_blocchi_settimanali.
+    """
     materie = cd["materie_attive"]
 
     materie_ordinate = sorted(
@@ -129,11 +156,19 @@ def fase2_piazzamento_forte(cd, docente_ok_wrapper):
 
 
 # ============================================================
-#   FUNZIONE OPERATIVA — PIAZZAMENTO BLOCCHI
+#   FUNZIONE OPERATIVA -- PIAZZAMENTO BLOCCHI
 # ============================================================
 
 def _slot_intoccabile(cd, data_g, h):
-    """Ritorna True se lo slot NON può essere toccato."""
+    """
+    Restituisce True se lo slot (data_g, h) non puo' essere modificato.
+
+    Uno slot e' intoccabile se:
+    - non era libero nello stato originale (libero_originale)
+    - il tipo giorno e' STAGE, FESTA o SPECIALE
+    - lo slot e' nella lista dei fissi (fissi_per_giorno)
+    - lo slot e' nella lista degli speciali (speciali_per_giorno)
+    """
     # slot non libero
     if not cd["libero_originale"].get((data_g, h), False):
         return True
@@ -151,6 +186,23 @@ def _slot_intoccabile(cd, data_g, h):
 
 
 def _piazza_blocchi_settimanali(cd, docente_ok_wrapper, mid, info, settimana):
+    """
+    Tenta di piazzare la quota settimanale di una materia in una settimana.
+
+    Logica:
+    1. Calcola quante ore mancano (debito_residuo vs ore_da_piazzare).
+    2. Piazza prima i blocchi interi di n ore consecutive (forte).
+    3. Se rimane un resto, chiama _piazza_soft per l'ora singola.
+
+    Selezione candidati (blocchi interi):
+    - score penalizza la posizione centrale della giornata.
+    - score penalizza la creazione di buchi interni.
+    - score premia la compattazione con lezioni adiacenti.
+    - Non piazza se il docente supera 3 ore nella stessa giornata.
+
+    CORNER CASE: se nessun candidato e' disponibile in tutta la settimana,
+    esce senza piazzare (le ore rimangono nel debito_residuo).
+    """
     ore_sett = info["ore_settimanali"]
     n        = info["_blocchi_minimi"]
     docente_id   = info.get("docente_id")
@@ -282,10 +334,17 @@ def _piazza_blocchi_settimanali(cd, docente_ok_wrapper, mid, info, settimana):
 
 
 # ============================================================
-#   FASE 3 — RIEMPIMENTO SOFT
+#   FASE 3 -- RIEMPIMENTO SOFT
 # ============================================================
 
 def fase3_riempimento_soft(cd, docente_ok_wrapper):
+    """
+    Seconda fase di piazzamento: tenta di piazzare le ore residue una alla
+    volta in qualsiasi slot libero dell'intero anno, senza vincolo di blocco.
+
+    Scorre le materie in ordine e per ognuna chiama _piazza_soft finche'
+    il debito e' esaurito o nessuno slot e' disponibile.
+    """
     for mid, info in cd["materie_attive"].items():
         while info.get("debito_residuo", 0) > 0:
             if not _piazza_soft(cd, docente_ok_wrapper, mid, info):
@@ -293,6 +352,16 @@ def fase3_riempimento_soft(cd, docente_ok_wrapper):
 
 
 def _piazza_soft(cd, docente_ok_wrapper, mid, info):
+    """
+    Piazza una singola ora di una materia nel primo slot libero disponibile.
+
+    Vincoli rispettati:
+    - Slot non intoccabile (no STAGE/FESTA/SPECIALE/FISSO)
+    - Docente disponibile (globale + orario)
+    - Docente non supera 3 ore nella stessa giornata
+
+    Restituisce True se l'ora e' stata piazzata, False altrimenti.
+    """
     docente_id   = info.get("docente_id")
     docente_nome = info.get("docente_nome", "")
     nome_materia = info["nome"]
@@ -341,10 +410,17 @@ def _piazza_soft(cd, docente_ok_wrapper, mid, info):
 
 
 # ============================================================
-#   FASE 4 — ULTRA-SOFT
+#   FASE 4 -- ULTRA-SOFT
 # ============================================================
 
 def fase4_riempimento_ultrasoft(cd, docente_ok_wrapper):
+    """
+    Terza fase: identica a fase3 ma con un secondo tentativo completo.
+
+    Utile nei casi in cui le prime fasi hanno lasciato debi piccoli che non
+    trovano posto per via della priorita' di ordinamento. Stessa logica di
+    _piazza_soft ma su tutto l'anno, senza vincoli diversi.
+    """
     for mid, info in cd["materie_attive"].items():
         while info.get("debito_residuo", 0) > 0:
             if not _piazza_ultrasoft(cd, docente_ok_wrapper, mid, info):
@@ -399,7 +475,7 @@ def _piazza_ultrasoft(cd, docente_ok_wrapper, mid, info):
     return False
 
 # ============================================================
-#   FASE 5 — RIEMPIMENTO FORZATO (SOLO PER ORE NON PIAZZATE)
+#   FASE 5 -- RIEMPIMENTO FORZATO (SOLO PER ORE NON PIAZZATE)
 # ============================================================
 
 def fase5_riempimento_forzato(cd):
@@ -466,6 +542,15 @@ def _piazza_forzato(cd, mid, info):
 # ============================================================
 
 def report_classe(cd):
+    """
+    Stampa un riepilogo della pianificazione per la classe:
+    - ore totali previste vs piazzate vs residue
+    - percentuale di completamento
+    - numero di buchi interni nella giornata
+
+    Un "buco interno" e' uno slot vuoto tra due slot occupati nello stesso
+    giorno (indicatore di qualita' del piazzamento).
+    """
     classe = cd["classe"]
     materie = cd["materie_attive"]
 

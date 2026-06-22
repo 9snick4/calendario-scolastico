@@ -13,6 +13,12 @@ print(">>> CARICATO orario_utils.py VERSIONE NUOVA")
 # ===============================
 
 def normalizza_giorno_it(g):
+    """
+    Normalizza qualsiasi variante testuale di un giorno italiano
+    (abbreviazione, senza accento, maiuscolo/minuscolo) nella forma
+    canonica con accento (es. "lun" -> "Lunedi'", "giovedi" -> "Giovedi'").
+    Restituisce None se l'input e' vuoto/None.
+    """
     if not g:
         return None
     g = g.strip().lower()
@@ -29,6 +35,10 @@ def normalizza_giorno_it(g):
 
 
 def label_giorno_it(dt):
+    """
+    Converte un oggetto datetime/date nel nome italiano del giorno della
+    settimana (es. datetime(2024, 1, 1) -> "Lunedi'").
+    """
     mapping_it = {
         "Monday": "Lunedì",
         "Tuesday": "Martedì",
@@ -50,6 +60,12 @@ DURATA_ORA_MINUTI = 60
 
 
 def orario_slot(index_ora):
+    """
+    Calcola l'orario di inizio di uno slot dato il suo indice (0-based).
+
+    Es.: indice 0 -> 08:00, indice 1 -> 09:00, ecc.
+    La costante ORA_INIZIO_LEZIONI e DURATA_ORA_MINUTI determinano la scala.
+    """
     start_dt = datetime.combine(date.today(), ORA_INIZIO_LEZIONI) + timedelta(
         minutes=DURATA_ORA_MINUTI * index_ora
     )
@@ -57,6 +73,14 @@ def orario_slot(index_ora):
 
 
 def intervalli_si_sovrappongono(inizio1, fine1, inizio2, fine2):
+    """
+    Restituisce True se i due intervalli temporali si sovrappongono.
+
+    Usa la logica: due intervalli si sovrappongono se e solo se
+    l'inizio del primo e' prima della fine del secondo E viceversa.
+    Gli intervalli che si toccano esattamente (fine1 == inizio2) NON
+    si considerano sovrapposti (confronto stretto <).
+    """
     return inizio1 < fine2 and inizio2 < fine1
 
 
@@ -65,6 +89,14 @@ def intervalli_si_sovrappongono(inizio1, fine1, inizio2, fine2):
 # ===============================
 
 def giorno_festivo(data):
+    """
+    Restituisce True se la data cade in un qualsiasi periodo di festivita'
+    registrato nel database.
+
+    NOTA DI PERFORMANCE: esegue una query ALL senza filtri; con molte
+    festivita' potrebbe essere lento. Da ottimizzare con un filtro SQL se
+    necessario.
+    """
     festivita = Festivita.query.all()
     for f in festivita:
         if f.data_inizio <= data <= f.data_fine:
@@ -125,6 +157,17 @@ def docente_disponibile(docente_id, giorno_label, index_ora):
 # ===============================
 
 def classe_in_stage_giorno(classe_id, data):
+    """
+    Restituisce True se la classe e' in stage nella data specificata.
+
+    Controlla sia il primo che il secondo periodo di stage e verifica che
+    il giorno della settimana rientri tra i giorni_stage configurati.
+
+    CORNER CASE: se giorni_stage e' vuoto/None, ogni giorno del periodo
+    e' considerato stage (comportamento "tutto il periodo").
+    CORNER CASE: i separatori ; e / vengono normalizzati in virgola prima
+    del parsing.
+    """
     stage = Stage.query.filter_by(classe_id=classe_id).first()
     if not stage:
         return False
@@ -162,6 +205,13 @@ from sqlalchemy import func
 
 
 def giorno_speciale_classe(classe_id, data_giorno):
+    """
+    Restituisce il primo GiornoSpeciale per quella classe in quella data,
+    oppure None se non esiste.
+
+    CORNER CASE: usa func.date() per confrontare le date eliminando
+    eventuali componenti orarie che potrebbero causare mancate corrispondenze.
+    """
     return GiornoSpeciale.query.filter(
         GiornoSpeciale.classe_id == classe_id,
         func.date(GiornoSpeciale.data) == data_giorno
@@ -173,6 +223,13 @@ def giorno_speciale_classe(classe_id, data_giorno):
 # ===============================
 
 def periodo_classe(classe, anno):
+    """
+    Restituisce (data_inizio, data_fine) per una classe con fallback sull'anno.
+
+    Se le date sono invertite (data_inizio > data_fine) le scambia
+    automaticamente per evitare loop infiniti nel generatore.
+    Restituisce (None, None) se la classe non ha date configurate.
+    """
     if not classe.data_inizio or not classe.data_fine:
         return None, None
 
@@ -192,6 +249,10 @@ def periodo_classe(classe, anno):
 # ===============================
 
 def slot_libero(griglia, data, start, blocco):
+    """
+    Controlla se tutti gli slot da start a start+blocco-1 sono liberi (None)
+    nella griglia per la data specificata.
+    """
     for i in range(start, start + blocco):
         if griglia[data][i] is not None:
             return False
@@ -269,6 +330,10 @@ def piazza_blocco(
 # ===============================
 
 def crea_griglia_settimanale(giorni_settimana, ore_giornaliere):
+    """
+    Crea una griglia vuota per una settimana: dizionario data -> lista di
+    slot (tutti None). Ogni slot corrisponde a un'ora di lezione.
+    """
     return {g["data"]: [None for _ in range(ore_giornaliere)] for g in giorni_settimana}
 
 
@@ -322,6 +387,10 @@ def costruisci_settimana(griglia, giorni_settimana, ore_giornaliere, calendario)
 # ===============================
 
 def salva_calendari(classi_info):
+    """
+    Converte classi_info in un dizionario classe_id -> {nome_classe,
+    ore_giornaliere, calendario} pronto per essere restituito al chiamante.
+    """
     calendario_per_classe = {}
 
     for cid, info in classi_info.items():

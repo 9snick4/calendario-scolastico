@@ -19,6 +19,19 @@ GIORNI_COMPLETI = {
 
 @anni_bp.route("/", methods=["GET", "POST"])
 def gestione_anno():
+    """
+    GET  /anni/  — mostra il form di configurazione dell'anno formativo.
+    POST /anni/  — salva le date generali e aggiorna automaticamente tutte
+    le classi.
+
+    Logica POST:
+    1. Legge le date globali (data_inizio, data_fine) e le opzioni generali.
+    2. Crea o aggiorna il record AnnoFormativo.
+    3. Per ogni classe, applica le date specifiche della classe (o fallback
+       alle date globali), le ore massime giornaliere e i giorni di lezione
+       selezionati dai checkbox.
+    4. Crea o aggiorna il CalendarioClasse corrispondente.
+    """
     anno = AnnoFormativo.query.first()
     classi = Classe.query.order_by(Classe.nome_classe).all()
 

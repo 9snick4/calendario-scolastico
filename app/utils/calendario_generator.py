@@ -28,6 +28,13 @@ print(">>> VERSIONE PATCHATA DEFINITIVA")
 
 
 def _slot_intoccabile(cd, data_g, h):
+    """
+    Versione del calendario_generator di _slot_intoccabile.
+
+    Restituisce True se lo slot non deve essere toccato dai ribilanciamenti
+    (fasi 5-8). Controlla: fissi_per_giorno, speciali_per_giorno e il tipo
+    del giorno (STAGE, FESTA, SPECIALE).
+    """
     # slot marcato come fisso o speciale
     if (data_g, h) in cd.get("fissi_per_giorno", set()):
         return True
@@ -42,10 +49,15 @@ def _slot_intoccabile(cd, data_g, h):
 
 def _rispetta_ore_minime_consecutive(row, h, materia_id, ore_minime, ore_g):
     """
-    Controlla se piazzare 1 ora in h può far parte
-    di un blocco di almeno ore_minime per quella materia.
-    Qui facciamo una versione semplice: non spezziamo blocchi esistenti
-    e non creiamo blocchi isolati se ore_minime > 1.
+    Controlla se piazzare 1 ora nello slot h puo' far parte di un blocco
+    di almeno ore_minime ore consecutive per quella materia.
+
+    Versione semplificata: lo slot h e' valido se almeno uno dei vicini
+    (h-1 o h+1) contiene gia' la stessa materia.
+
+    CORNER CASE: se ore_minime <= 1 restituisce sempre True.
+    CORNER CASE: ore singole isolate rifiutate quando ore_minime > 1,
+    per non spezzare il vincolo di blocco della materia.
     """
 
     if ore_minime <= 1:
@@ -67,8 +79,19 @@ def _rispetta_ore_minime_consecutive(row, h, materia_id, ore_minime, ore_g):
 
 def fallback_riempimento_buchi(cd, docente_ok_wrapper):
     """
-    FASE 5: riempimento buchi verso fine anno.
-    Versione definitiva con ritorno del numero di cambiamenti.
+    Fase 5 del ciclo di ribilanciamento: riempie gli slot vuoti rimasti.
+
+    Funziona DOPO il motore ordinario, quando rimangono ore di debito e
+    ancora buchi disponibili. Scansiona tutti gli slot liberi, li ordina
+    per data discendente (priorita' alle date piu' lontane), e per ogni
+    materia con debito cerca di piazzare le ore mancanti.
+
+    Vincoli rispettati:
+    - Slot non intoccabile
+    - Docente disponibile (globale + orario)
+    - Rispetta ore_minime_consecutive
+
+    Restituisce il numero di ore piazzate in questa passata.
     """
 
     cambiamenti = 0
@@ -151,20 +174,20 @@ def fallback_riempimento_buchi(cd, docente_ok_wrapper):
 
 def fase6_ribilanciamento(cd, docente_ok_wrapper):
     """
-    FASE 6 DEFINITIVA (intra-classe, anti-loop, anti-duplicazione)
-    -------------------------------------------------------------
-    Obiettivo:
-        - liberare slot per materie critiche (con debito)
-        - spostando blocchi di materie leggere (debito=0, ore_minime=1)
-    Vincoli:
-        - NON tocca fissi/speciali
-        - NON tocca slot locked
-        - NON tocca slot origine fase6/fase7/critica
-        - rispetta blocchi minimi
-        - rispetta disponibilità docente
-        - rispetta occupazione globale
-        - aggiorna correttamente occ.libera / occ.occupa
-        - ritorna il numero di cambiamenti effettuati
+    Fase 6: ribilanciamento intra-classe.
+
+    Libera slot per materie critiche (debito > 0) spostando blocchi di
+    materie leggere (debito=0, ore_minime=1) in altri slot della stessa
+    classe.
+
+    Per ogni materia critica cerca uno slot occupato da una materia
+    spostabile, trova una destinazione libera per quel blocco, lo sposta,
+    aggiorna l'occupazione globale e piazza l'ora critica.
+
+    Non tocca slot con origine fisso/speciale/fase6/fase7/critica
+    e non tocca slot locked.
+
+    Restituisce il numero di cambiamenti effettuati.
     """
 
     cambiamenti = 0
@@ -342,18 +365,20 @@ def fase6_ribilanciamento(cd, docente_ok_wrapper):
 
 def fase7_ribilanciamento_interclassi(classi_data, docente_ok_wrapper):
     """
-    FASE 7 DEFINITIVA — Ribilanciamento inter-classi
-    ------------------------------------------------
-    Obiettivo:
-        - liberare slot per materie critiche spostando ore
-          da classi dello stesso docente che NON hanno debito.
-    Vincoli:
-        - NON tocca fissi/speciali
-        - NON tocca locked
-        - NON tocca origine fase6/fase7/critica
-        - rispetta occupazione globale
-        - rispetta disponibilità docente
-        - ritorna numero di cambiamenti
+    Fase 7: ribilanciamento inter-classi (docente-centrico).
+
+    Quando un docente insegna in piu' classi e una di esse ha ancora
+    debito, tenta di liberare un'ora in un'altra classe (senza debito)
+    per cederla alla classe critica.
+
+    Costruisce una mappa docente -> classi, separa le materie con/senza
+    debito, poi per ogni slot libero nella classe critica cerca un'ora
+    spostabile in un'altra classe dello stesso docente.
+
+    CORNER CASE: docente con una sola classe viene saltato.
+    CORNER CASE: non tocca slot locked o di origine fase6/fase7/critica.
+
+    Restituisce il numero di cambiamenti effettuati.
     """
 
     cambiamenti = 0
@@ -505,17 +530,18 @@ def fase7_ribilanciamento_interclassi(classi_data, docente_ok_wrapper):
 
 def fase8_compattezza(cd, docente_ok_wrapper):
     """
-    FASE 8 DEFINITIVA — Compattezza intra-classe
-    --------------------------------------------
-    Obiettivo:
-        - ridurre buchi interni
-        - spostare ore verso l'alto nella giornata
-    Vincoli:
-        - NON tocca fissi/speciali
-        - NON tocca locked
-        - NON tocca origine fase6/fase7/critica
-        - rispetta occupazione globale
-        - ritorna numero di cambiamenti
+    Fase 8: compattazione intra-classe.
+
+    Riduce i buchi interni spostandoli verso l'inizio della giornata:
+    per ogni buco (slot None) trova la prima lezione successiva non locked
+    e la sposta in alto.
+
+    Questo migliora la leggibilita' del calendario evitando orari "a buchi".
+
+    CORNER CASE: non sposta slot locked o di origine fase6/fase7/critica.
+    CORNER CASE: verifica la disponibilita' del docente nel nuovo slot.
+
+    Restituisce il numero di cambiamenti effettuati.
     """
 
     cambiamenti = 0
@@ -574,6 +600,31 @@ def fase8_compattezza(cd, docente_ok_wrapper):
     return cambiamenti
 
 def genera_calendario_annuale():
+    """
+    Funzione principale dell'applicazione: genera il calendario scolastico
+    annuale per tutte le classi.
+
+    Pipeline completa:
+    1. Reset delle occupazioni globali.
+    2. prepara_classi() — carica DB e costruisce strutture dati per ogni classe.
+    3. Per ogni classe, crea le griglie settimanali vuote.
+    4. Per ogni settimana, applica in ordine:
+       a. apply_stage         — blocca i giorni di stage
+       b. apply_festivita     — blocca i giorni festivi
+       c. apply_special_days  — piazza i giorni speciali
+       d. apply_fixed_days    — piazza i giorni fissi
+    5. piazzamento_ordinario() — motore a 8 fasi per il resto delle ore.
+    6. costruisci_settimana() — converte le griglie nel calendario finale.
+    7. salva_calendari() — assembla il dizionario da restituire.
+    8. valida_motore() — verifica coerenza interna e stampa errori.
+
+    Ritorna: dict {classe_id: {nome_classe, ore_giornaliere, calendario}}
+
+    CORNER CASE: se griglie[key] e' None per una classe, quella settimana
+    viene saltata con un avviso WARN (non genera eccezione).
+    CORNER CASE: il ciclo di ribilanciamento (fasi 5-8) gira al massimo
+    MAX_ITER volte; se nessuna fase produce cambiamenti si ferma prima.
+    """
 
     occ.OCCUPAZIONE_DOCENTI_GLOBALE.clear()
     occ.OCCUPAZIONE_CLASSI_GLOBALE.clear()

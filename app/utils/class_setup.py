@@ -18,12 +18,28 @@ from app.utils.orario_utils import label_giorno_it, normalizza_giorno_it
 
 def prepara_classi():
     """
-    Prepara tutte le strutture dati necessarie al motore:
-    - classi_info
-    - materie_info
-    - settimane per classe
-    - dizionari docenti/materie
-    - occupazione docenti LOCALE (separata dalla globale)
+    Costruisce e restituisce tutte le strutture dati necessarie al motore
+    di pianificazione:
+    - classi_info: dizionario classe_id -> {classe, ore_giornaliere,
+      giorni_classe, settimane_classe, materie_info, giorni_fissi, calendario}
+    - materie_dict, docenti_dict: mappe id -> nome
+    - nomi_non_prof: insieme di nomi delle materie non professionali
+    - occupazione_docenti: dizionario locale (separato dalla globale)
+
+    Logica per ogni classe:
+    1. Determina l'intervallo di date (da classe o da anno formativo).
+    2. Itera ogni giorno del range mantenendo solo quelli nei giorni di
+       lezione configurati.
+    3. Raggruppa i giorni per settimana ISO.
+    4. Per ogni MateriaClasse calcola il debito_residuo (ore annuali da
+       piazzare) e la quota settimanale teorica.
+
+    CORNER CASE: se AnnoFormativo non esiste restituisce tuple di valori
+    vuoti senza generare eccezioni.
+    CORNER CASE: le classi senza giorni di lezione configurati ricevono il
+    default Lun-Ven.
+    CORNER CASE: le materie con ore_annuali <= 0 vengono silenziosamente
+    ignorate.
     """
 
     anno = AnnoFormativo.query.first()

@@ -8,6 +8,13 @@ festivita_bp = Blueprint("festivita", __name__, url_prefix="/festivita")
 
 @festivita_bp.route("/", methods=["GET", "POST"])
 def gestione_festivita():
+    """
+    GET  /festivita/ — mostra tutti i periodi di festivita'.
+    POST /festivita/ — aggiunge un nuovo periodo (data_inizio, data_fine,
+                       descrizione opzionale).
+
+    Entrambe le date sono obbligatorie; se mancano si mostra un errore.
+    """
     festivita = Festivita.query.order_by(Festivita.data_inizio).all()
 
     if request.method == "POST":
@@ -39,6 +46,11 @@ def gestione_festivita():
 
 @festivita_bp.route("/elimina/<int:id>", methods=["POST"])
 def elimina_festivita(id):
+    """
+    Elimina un periodo di festivita'. Gli eventuali calendari gia' generati
+    in memoria NON vengono rigenerati automaticamente: bisogna rieseguire
+    la generazione per riflettere la modifica.
+    """
     f = Festivita.query.get_or_404(id)
     db.session.delete(f)
     db.session.commit()

@@ -6,6 +6,18 @@ from app.utils.orario_utils import classe_in_stage_giorno, giorno_festivo
 
 def apply_stage(griglia, giorni_settimana, classe):
     """
+    Applica il blocco STAGE alla griglia settimanale di una classe.
+
+    Per ogni giorno della settimana che cade in un periodo di stage e
+    NON e' festivo, riempie TUTTI gli slot orari con il blocco STAGE
+    (tipo="STAGE", fisso=True) e registra l'occupazione nella mappa globale
+    OCCUPAZIONE_CLASSI_GLOBALE.
+
+    CORNER CASE: i giorni festivi hanno priorita' sullo stage; se un giorno
+    e' sia festivo che stage, viene trattato come FESTA.
+    CORNER CASE: solo i giorni_stage configurati nel record Stage vengono
+    bloccati, non tutti i giorni del periodo.
+
     STAGE (hard lock totale):
     - riempie tutta la giornata con 'STAGE'
     - marca gli slot come fissi e non modificabili

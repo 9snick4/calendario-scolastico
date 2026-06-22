@@ -17,6 +17,26 @@ def apply_special_days(
     occupazione_docenti,
     docente_ok
 ):
+    """
+    Applica i giorni speciali alla griglia di una settimana.
+
+    Per ogni data con uno o piu' GiornoSpeciale:
+    1. Piazza le ore indicate (materia + docente specificati) nel primo
+       blocco consecutivo libero disponibile.
+    2. Blocca tutti gli slot rimanenti come SPECIALE_VUOTO, impedendo al
+       motore ordinario di usarli.
+
+    PRIORITA' (non invade):
+    - giorni con slot STAGE o FESTA (skippati interamente)
+
+    CORNER CASE: piu' materie speciali nella stessa giornata vengono
+    piazzate in sequenza; ognuna prende il primo blocco libero disponibile
+    dopo le precedenti.
+    CORNER CASE: se il blocco richiesto e' piu' lungo degli slot liberi
+    disponibili, piazza solo le ore possibili (min con debito_residuo).
+    CORNER CASE: se mid non e' in materie_info (materia non assegnata a
+    questa classe), il giorno speciale viene saltato con un log.
+    """
     print(">>> APPLY SPECIAL DAYS INIZIATO")
 
     giorni_speciali = GiornoSpeciale.query.filter_by(classe_id=classe.id).all()

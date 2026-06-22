@@ -12,6 +12,12 @@ classi_bp = Blueprint("classi", __name__, url_prefix="/classi")
 # ---------------------------------------------------------
 @classi_bp.route("/", methods=["GET", "POST"])
 def lista_classi():
+    """
+    GET  /classi/         — mostra la lista delle classi.
+    POST /classi/ (salva_associazioni) — aggiorna le associazioni tra classi
+                           parallele (campo classe_associata_id).
+    POST /classi/ (nome_classe) — crea una nuova classe.
+    """
 
     # 🔥 SALVATAGGIO ASSOCIAZIONI
     if request.method == "POST" and "salva_associazioni" in request.form:
@@ -49,6 +55,9 @@ def lista_classi():
 # ---------------------------------------------------------
 @classi_bp.route("/elimina/<int:classe_id>", methods=["POST"])
 def elimina_classe(classe_id):
+    """
+    Elimina una classe e tutto il suo contenuto (cascade: materie, calendario).
+    """
     classe = Classe.query.get_or_404(classe_id)
     db.session.delete(classe)
     db.session.commit()
@@ -62,6 +71,12 @@ def elimina_classe(classe_id):
 # ---------------------------------------------------------
 @classi_bp.route("/<int:classe_id>/materie")
 def materie_classe(classe_id):
+    """
+    Mostra la pagina di gestione delle materie per una singola classe.
+
+    Calcola anche il totale delle ore annuali gia' inserite per evidenziare
+    eventuali eccessi o mancanze rispetto al monte ore previsto.
+    """
     classe = Classe.query.get_or_404(classe_id)
 
     materie = Materia.query.order_by(db.func.lower(Materia.nome)).all()
@@ -98,6 +113,12 @@ def materie_classe(classe_id):
 # ---------------------------------------------------------
 @classi_bp.route("/<int:classe_id>/materie/crea", methods=["POST"])
 def crea_materia_classe(classe_id):
+    """
+    Crea una nuova associazione Materia-Classe con le ore annuali e il docente.
+
+    Tutti i campi sono obbligatori; se manca qualcuno si torna al form
+    con un messaggio di errore.
+    """
     materia_id = request.form.get("materia_id")
     ore_annuali = request.form.get("ore_annuali")
     docente_id = request.form.get("docente_id")

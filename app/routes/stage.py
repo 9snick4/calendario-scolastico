@@ -10,6 +10,9 @@ stage_bp = Blueprint("stage", __name__, url_prefix="/stage")
 # LISTA + FORM
 @stage_bp.route("/")
 def gestione_stage():
+    """
+    Mostra la lista delle classi con i rispettivi dati di stage.
+    """
     classi = Classe.query.order_by(Classe.nome_classe).all()
     stage_dati = Stage.query.all()
     return render_template("stage.html", classi=classi, stage_dati=stage_dati)
@@ -17,6 +20,16 @@ def gestione_stage():
 # CREA O MODIFICA STAGE
 @stage_bp.route("/salva", methods=["POST"])
 def salva_stage():
+    """
+    Crea o aggiorna i periodi di stage per una classe.
+
+    Supporta fino a due periodi (stage1_da/a, stage2_da/a) e una lista
+    di giorni della settimana in cui lo stage e' attivo.
+    Se nessun giorno viene selezionato, il default e' Lun-Ven.
+
+    CORNER CASE: se i due periodi si sovrappongono, il motore li gestisce
+    correttamente perche' controlla ogni data individualmente.
+    """
     classe_id = request.form.get("classe_id")
 
     if not classe_id:
@@ -31,6 +44,7 @@ def salva_stage():
 
     # Funzione per convertire le date
     def parse_date(value):
+        """Converte una stringa "YYYY-MM-DD" in un oggetto date; restituisce None se la stringa e' vuota."""
         return datetime.strptime(value, "%Y-%m-%d").date() if value else None
 
     # Salva date stage

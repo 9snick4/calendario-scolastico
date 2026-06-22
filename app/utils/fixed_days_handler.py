@@ -18,6 +18,25 @@ def apply_fixed_days(
     giorni_fissi_classe,
     docente_ok
 ):
+    """
+    Applica i vincoli di giorni fissi alla griglia di una settimana.
+
+    Per ogni GiornoFisso della classe, cerca il primo blocco CONSECUTIVO
+    libero nel giorno della settimana corrispondente e vi piazza le ore
+    richieste, marcandole come FISSO e locked.
+
+    PRIORITA' (non invade):
+    - giorni gia' dichiarati come speciali per quella materia
+    - giorni con almeno uno slot STAGE
+    - giorni con almeno uno slot FESTA
+    - giorni che hanno gia' altri slot fissi/speciali
+
+    CORNER CASE: se non esiste alcun blocco consecutivo libero abbastanza
+    lungo, il giorno fisso viene saltato con un avviso (WARN) ma NON
+    genera un'eccezione.
+    CORNER CASE: se il docente del giorno fisso non esiste nel DB, lo slot
+    viene saltato con un avviso (ATTENZIONE).
+    """
     if not giorni_fissi_classe:
         return
 
