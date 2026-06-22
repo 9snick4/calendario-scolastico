@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2>Gestione Festività</h2>
+
+    <form action="{{ url_for('festivita.gestione_festivita') }}" method="POST" class="mb-4">
+
+        <div class="row">
+            <div class="col-md-3">
+                <label class="form-label">Data inizio</label>
+                <input type="date" name="data_inizio" class="form-control" required>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Data fine</label>
+                <input type="date" name="data_fine" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Descrizione</label>
+                <input type="text" name="descrizione" class="form-control" placeholder="Es. Vacanze di Natale">
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+                <button class="btn btn-primary w-100">Aggiungi</button>
+            </div>
+        </div>
+
+    </form>
+
+    <hr>
+
+    <h3>Elenco festività</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Inizio</th>
+                <th>Fine</th>
+                <th>Descrizione</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in festivita %}
+            <tr>
+                <td>{{ f.data_inizio }}</td>
+                <td>{{ f.data_fine }}</td>
+                <td>{{ f.descrizione }}</td>
+                <td>
+                    <form action="{{ url_for('festivita.elimina_festivita', id=f.id) }}" method="POST">
+                        <button class="btn btn-danger btn-sm" onclick="return confirm('Eliminare?')">Elimina</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

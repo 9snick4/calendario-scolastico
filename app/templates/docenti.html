@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Gestione Docenti</h2>
+
+    <!-- FORM CREAZIONE DOCENTE -->
+    <form action="{{ url_for('docenti.crea_docente') }}" method="POST" class="mt-4">
+
+        <div class="mb-3">
+            <label class="form-label">Nome docente</label>
+            <input type="text" name="nome_docente" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Crea docente</button>
+    </form>
+
+    <hr class="my-4">
+
+    <!-- LISTA DOCENTI -->
+    <h3>Elenco Docenti</h3>
+
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for docente in docenti %}
+            <tr>
+                <td>{{ docente.nome_docente }}</td>
+                <td>
+                    <form action="{{ url_for('docenti.elimina_docente', docente_id=docente.id) }}" method="POST" style="display:inline;">
+                        <button class="btn btn-danger btn-sm" onclick="return confirm('Eliminare il docente?')">Elimina</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

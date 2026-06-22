@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Vincoli Docenti</h2>
+
+    <!-- 🔵 BOTTONE GIORNI FISSI PER CLASSE -->
+    <div class="mb-4">
+        <a href="{{ url_for('vincoli.giorni_fissi') }}" class="btn btn-info">
+            Giorni Fissi per Classe
+        </a>
+        <a href="{{ url_for('vincoli.giorni_speciali') }}" class="btn btn-warning ms-2">
+            Giorni Speciali
+        </a>
+        <a href="{{ url_for('vincoli.disponibilita_annua') }}" class="btn btn-secondary ms-2">
+            Disponibilità Annua
+        </a>
+    </div>
+
+    <!-- FORM AGGIUNTA VINCOLO DOCENTE -->
+    <form action="{{ url_for('vincoli.vincoli_docenti') }}" method="POST" class="mb-4">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <label class="form-label">Docente</label>
+                <select name="docente_id" class="form-select" required>
+                    <option value="">Seleziona docente</option>
+                    {% for d in docenti %}
+                        <option value="{{ d.id }}">{{ d.nome_docente }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Giorno</label>
+                <select name="giorno" class="form-select" required>
+                    <option value="">Seleziona</option>
+                    <option>Lunedì</option>
+                    <option>Martedì</option>
+                    <option>Mercoledì</option>
+                    <option>Giovedì</option>
+                    <option>Venerdì</option>
+                    <option>Sabato</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Da</label>
+                <input type="time" name="ora_da" class="form-control" required>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">A</label>
+                <input type="time" name="ora_a" class="form-control" required>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+                <button class="btn btn-primary w-100">Aggiungi</button>
+            </div>
+
+        </div>
+
+    </form>
+
+    <h3>Vincoli registrati</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Docente</th>
+                <th>Giorno</th>
+                <th>Da</th>
+                <th>A</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in vincoli %}
+            <tr>
+                <td>{{ v.docente.nome_docente }}</td>
+                <td>{{ v.giorno }}</td>
+                <td>{{ v.ora_da }}</td>
+                <td>{{ v.ora_a }}</td>
+                <td>
+                    <a href="{{ url_for('vincoli.delete_vincolo_docente', id=v.id) }}" class="btn btn-danger btn-sm">
+                        Elimina
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

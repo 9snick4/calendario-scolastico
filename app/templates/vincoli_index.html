@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Gestione Vincoli</h2>
+
+    <div class="row">
+
+        <!-- Vincoli Docenti -->
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    Vincoli Docenti
+                </div>
+                <div class="card-body">
+                    <p>Imposta le indisponibilità dei docenti per giorni e orari.</p>
+                    <a href="{{ url_for('vincoli.vincoli_docenti') }}" class="btn btn-primary w-100">
+                        Gestisci Vincoli Docenti
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giorni Speciali -->
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-success text-white">
+                    Giorni Speciali
+                </div>
+                <div class="card-body">
+                    <p>Imposta giornate con orario forzato per una classe.</p>
+                    <a href="{{ url_for('vincoli.giorni_speciali') }}" class="btn btn-success w-100">
+                        Gestisci Giorni Speciali
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Festività -->
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-warning text-dark">
+                    Festività
+                </div>
+                <div class="card-body">
+                    <p>Definisci giorni o periodi senza lezione.</p>
+                    <a href="{{ url_for('festivita.festivita') }}" class="btn btn-warning w-100">
+                        Gestisci Festività
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

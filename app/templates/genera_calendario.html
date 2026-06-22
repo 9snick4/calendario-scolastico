@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2>Genera Calendario Scolastico</h2>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div></div>
+
+        <div>
+            <form id="form-genera" 
+                  action="{{ url_for('orario.genera_calendario') }}" 
+                  method="POST" 
+                  style="display:inline;">
+                <button id="btn-genera" class="btn btn-primary" type="submit">
+                    Genera Cal
+                </button>
+            </form>
+
+            <a href="{{ url_for('orario.export_xls') }}" class="btn btn-success ms-2">
+                Scarica calendario annuale in XLS
+            </a>
+
+            <a href="{{ url_for('orario.report_vincoli') }}" class="btn btn-warning ms-2">
+                Report Vincoli
+            </a>
+
+            <a href="{{ url_for('orario.diagnostica') }}" class="btn btn-danger ms-2">
+
+                Diagnostica Sovrapposizioni
+            </a>
+            
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Calendari già generati</h3>
+
+    {% if files %}
+        <ul class="list-group mt-3">
+            {% for f in files %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ f }}
+                    <a class="btn btn-primary btn-sm"
+                       href="{{ url_for('orario.download_calendario', filename=f) }}">
+                        Scarica
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-muted mt-3">Nessun calendario generato finora.</p>
+    {% endif %}
+
+</div>
+
+<!-- 🔥 POPUP "GENERAZIONE IN CORSO" -->
+<div id="popup-generazione" 
+     style="display:none;
+            position:fixed;
+            top:0; left:0;
+            width:100%; height:100%;
+            background:rgba(0,0,0,0.5);
+            z-index:9999;
+            align-items:center;
+            justify-content:center;
+            font-size:2rem;
+            color:white;
+            font-weight:bold;">
+    GENERAZIONE IN CORSO...
+</div>
+
+<!-- 🔥 SCRIPT: mostra popup SOLO quando clicchi il pulsante -->
+<script>
+const formGenera = document.getElementById("form-genera");
+const popup = document.getElementById("popup-generazione");
+
+if (formGenera && popup) {
+    formGenera.addEventListener("submit", function () {
+        popup.style.display = "flex";   // lo rendiamo visibile SOLO qui
+    });
+}
+</script>
+
+{% endblock %}

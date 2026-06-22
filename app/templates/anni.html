@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Anno Formativo</h2>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+            Impostazioni Generali Anno Formativo
+        </div>
+
+        <div class="card-body">
+            <form action="{{ url_for('anni.gestione_anno') }}" method="POST">
+
+                <!-- DATE GENERALI -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Data inizio</label>
+                        <input type="date" name="data_inizio" class="form-control"
+                               value="{{ anno.data_inizio if anno else '' }}" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Data fine</label>
+                        <input type="date" name="data_fine" class="form-control"
+                               value="{{ anno.data_fine if anno else '' }}" required>
+                    </div>
+                </div>
+
+                <!-- ORARI GENERALI -->
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Ora inizio lezioni</label>
+                        <input type="time" name="ora_inizio" class="form-control"
+                               value="{{ anno.ora_inizio if anno else '08:00' }}">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Ora fine lezioni</label>
+                        <input type="time" name="ora_fine" class="form-control"
+                               value="{{ anno.ora_fine if anno else '14:00' }}">
+                    </div>
+
+                    <div class="col-md-3 d-flex align-items-end">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="sabato"
+                                   {% if anno and anno.sabato %}checked{% endif %}>
+                            <label class="form-check-label">Sabato attivo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- CALENDARIO CLASSI -->
+                <h4 class="mb-3">Calendario per Classe</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Classe</th>
+                                <th>Data Inizio</th>
+                                <th>Data Fine</th>
+                                <th>Ore max/giorno</th>
+                                <th>Giorni di lezione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% set ABBREV = {
+                                'Lunedì':'lun','Martedì':'mar','Mercoledì':'mer',
+                                'Giovedì':'gio','Venerdì':'ven','Sabato':'sab'
+                            } %}
+
+                            {% for c in classi %}
+                            {% set giorni_completi = (c.giorni_lezione or 'Lunedì,Martedì,Mercoledì,Giovedì,Venerdì').split(',') %}
+                            {% set giorni_abbrev = [] %}
+                            {% for g in giorni_completi %}
+                                {% set _ = giorni_abbrev.append(ABBREV.get(g.strip(), g.strip())) %}
+                            {% endfor %}
+
+                            <tr>
+                                <td>
+                                    <strong>{{ c.nome_classe }}</strong>
+                                
+                                    <form action="{{ url_for('anni.reset_classe', classe_id=c.id) }}"
+                                          method="POST"
+                                          style="display:inline-block; margin-left:10px;"
+                                          onsubmit="return confirm('Vuoi davvero resettare questa classe?')">
+                                
+                                        <button class="btn btn-sm btn-outline-danger">Reset</button>
+                                    </form>
+                                </td>
+                                
+
+                                <td>
+                                    <input type="date"
+                                           name="classe_{{ c.id }}_inizio"
+                                           class="form-control"
+                                           value="{% if calendari[c.id] %}{{ calendari[c.id].data_inizio }}{% else %}{{ anno.data_inizio }}{% endif %}">
+                                </td>
+
+                                <td>
+                                    <input type="date"
+                                           name="classe_{{ c.id }}_fine"
+                                           class="form-control"
+                                           value="{% if calendari[c.id] %}{{ calendari[c.id].data_fine }}{% else %}{{ anno.data_fine }}{% endif %}">
+                                </td>
+
+                                <td>
+                                    <input type="number"
+                                           name="classe_{{ c.id }}_ore"
+                                           class="form-control"
+                                           min="1" max="10"
+                                           value="{{ c.ore_massime_giornaliere or 6 }}">
+                                </td>
+
+                                <td>
+                                    <div class="d-flex gap-3 flex-wrap">
+                                        {% for g in ['lun','mar','mer','gio','ven','sab'] %}
+                                        <div class="form-check">
+                                            <input class="form-check-input"
+                                                   type="checkbox"
+                                                   name="classe_{{ c.id }}_giorni"
+                                                   value="{{ g }}"
+                                                   {% if g in giorni_abbrev %}checked{% endif %}>
+                                            <label class="form-check-label text-capitalize">{{ g }}</label>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </td>
+
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn btn-primary mt-3">Salva Anno Formativo</button>
+
+                <button class="btn btn-primary mt-3">Salva Anno Formativo</button>
+
+                <button class="btn btn-danger mt-3 ms-3"
+                        type="submit"
+                        formaction="{{ url_for('anni.reset_anno') }}"
+                        formmethod="POST"
+                        onclick="return confirm('Sei sicuro di voler cancellare tutti i dati dell’anno formativo?')">
+                    RESET
+                </button>
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

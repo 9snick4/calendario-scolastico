@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2>Gestione Stage</h2>
+
+    <!-- FORM INSERIMENTO / MODIFICA -->
+    <form action="{{ url_for('stage.salva_stage') }}" method="POST" class="border p-3 mt-3">
+
+        <div class="mb-3">
+            <label class="form-label">Classe</label>
+            <select name="classe_id" class="form-select" required>
+                <option value="">-- Seleziona classe --</option>
+                {% for classe in classi %}
+                <option value="{{ classe.id }}">{{ classe.nome_classe }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <h5>Periodo Stage 1</h5>
+        <div class="row g-3 mb-3">
+            <div class="col-md-3">
+                <label class="form-label">Da</label>
+                <input type="date" name="stage1_da" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">A</label>
+                <input type="date" name="stage1_a" class="form-control">
+            </div>
+        </div>
+
+        <h5>Periodo Stage 2</h5>
+        <div class="row g-3 mb-3">
+            <div class="col-md-3">
+                <label class="form-label">Da</label>
+                <input type="date" name="stage2_da" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">A</label>
+                <input type="date" name="stage2_a" class="form-control">
+            </div>
+        </div>
+
+        <h5>Giorni della settimana in cui si svolge lo stage</h5>
+        <div class="mb-3">
+
+            <label class="me-3">
+                <input type="checkbox" name="giorni_stage" value="Lunedì" checked> Lun
+            </label>
+
+            <label class="me-3">
+                <input type="checkbox" name="giorni_stage" value="Martedì" checked> Mar
+            </label>
+
+            <label class="me-3">
+                <input type="checkbox" name="giorni_stage" value="Mercoledì" checked> Mer
+            </label>
+
+            <label class="me-3">
+                <input type="checkbox" name="giorni_stage" value="Giovedì" checked> Gio
+            </label>
+
+            <label class="me-3">
+                <input type="checkbox" name="giorni_stage" value="Venerdì" checked> Ven
+            </label>
+
+        </div>
+
+        <button class="btn btn-primary">Salva</button>
+    </form>
+
+    <hr>
+
+    <!-- TABELLA DATI STAGE -->
+    <h4>Dati Stage Inseriti</h4>
+
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Classe</th>
+                <th>Stage 1</th>
+                <th>Stage 2</th>
+                <th>Giorni Stage</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in stage_dati %}
+            <tr>
+                <td>{{ s.classe.nome_classe }}</td>
+
+                <td>
+                    {% if s.periodo_stage_1_da %}
+                        {{ s.periodo_stage_1_da }} → {{ s.periodo_stage_1_a }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if s.periodo_stage_2_da %}
+                        {{ s.periodo_stage_2_da }} → {{ s.periodo_stage_2_a }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if s.giorni_stage %}
+                        {{ s.giorni_stage }}
+                    {% else %}
+                        Lunedì,Martedì,Mercoledì,Giovedì,Venerdì
+                    {% endif %}
+                </td>
+
+                <td>
+                    <form action="{{ url_for('orario.delete_stage', classe_id=s.classe_id) }}"
+                          method="POST"
+                          style="display:inline;">
+                        <button class="btn btn-danger btn-sm"
+                                onclick="return confirm('Eliminare le date di stage per questa classe?')">
+                            Elimina
+                        </button>
+                    </form>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Disponibilità Annua Docenti</h2>
+
+    <div class="mb-3">
+        <a href="{{ url_for('vincoli.vincoli_docenti') }}" class="btn btn-secondary">
+            Torna ai Vincoli Docenti
+        </a>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            Aggiungi Disponibilità Annua
+        </div>
+
+        <div class="card-body">
+            <form method="POST">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-4">
+                        <label class="form-label">Docente</label>
+                        <select name="docente_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona docente --</option>
+                            {% for d in docenti %}
+                            <option value="{{ d.id }}">{{ d.nome_docente }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Disponibile dal</label>
+                        <input type="date" name="data_da" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Disponibile al</label>
+                        <input type="date" name="data_a" class="form-control" required>
+                    </div>
+
+                </div>
+
+                <button class="btn btn-info">Aggiungi</button>
+            </form>
+        </div>
+    </div>
+
+    <h4>Elenco Disponibilità</h4>
+
+    <table class="table table-bordered mt-3">
+        <thead class="table-light">
+            <tr>
+                <th>Docente</th>
+                <th>Dal</th>
+                <th>Al</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in disponibilita %}
+            <tr>
+                <td>{{ d.docente.nome_docente }}</td>
+                <td>{{ d.data_da }}</td>
+                <td>{{ d.data_a }}</td>
+                <td>
+                    <a href="{{ url_for('vincoli.delete_disponibilita_annua', id=d.id) }}"
+                       class="btn btn-danger btn-sm">Elimina</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2>Diagnostica Sovrapposizioni Docenti</h2>
+    <hr>
+
+    {# Filtra DOC EST direttamente nel template #}
+    {% set conflitti_filtrati = conflitti | selectattr("docente", "ne", "DOC EST") | list %}
+
+    {% if conflitti_filtrati and conflitti_filtrati|length > 0 %}
+        <div class="alert alert-danger">
+            <strong>⚠️ Sono state trovate {{ conflitti_filtrati|length }} sovrapposizioni!</strong>
+        </div>
+
+        <ul class="list-group">
+            {% for c in conflitti_filtrati %}
+                <li class="list-group-item">
+                    <strong>{{ c.docente }}</strong><br>
+                    Data: {{ c.data }}<br>
+                    Ora: {{ c.ora }}<br>
+                    Classi coinvolte: {{ ", ".join(c.classi) }}
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <div class="alert alert-success">
+            <strong>✅ Nessuna sovrapposizione docente trovata!</strong>
+        </div>
+    {% endif %}
+
+    <a href="{{ url_for('orario.lista_versioni') }}" class="btn btn-secondary mt-3">
+        Torna alla generazione calendario
+    </a>
+
+</div>
+
+{% endblock %}

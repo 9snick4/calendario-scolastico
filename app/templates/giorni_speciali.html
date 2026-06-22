@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Giorni Speciali</h2>
+
+    <div class="mb-3">
+        <a href="{{ url_for('vincoli.vincoli_docenti') }}" class="btn btn-primary">
+            Torna ai Vincoli Docenti
+        </a>
+    </div>
+
+    <!-- FILTRO PER CLASSE -->
+    <form method="GET" class="mb-4">
+        <div class="row">
+            <div class="col-md-4">
+                <select name="classe_id" class="form-control">
+                    <option value="">-- filtra per classe --</option>
+                    {% for c in classi %}
+                    <option value="{{ c.id }}" {% if filtro_classe == c.id|string %}selected{% endif %}>
+                        {{ c.nome_classe }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-secondary w-100">Filtra</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-success text-white">
+            Aggiungi Giorno Speciale
+        </div>
+
+        <div class="card-body">
+            <form method="POST">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-3">
+                        <label class="form-label">Classe</label>
+                        <select name="classe_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona classe --</option>
+                            {% for c in classi %}
+                            <option value="{{ c.id }}">{{ c.nome_classe }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Data</label>
+                        <input type="date" name="data" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Materia</label>
+                        <select name="materia_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona materia --</option>
+                            {% for m in materie %}
+                            <option value="{{ m.id }}">{{ m.nome }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label">Ore</label>
+                        <input type="number" name="ore" class="form-control" min="1" max="10" required>
+                    </div>
+
+                    <div class="col-md-3 mt-3">
+                        <label class="form-label">Docente (opzionale)</label>
+                        <select name="docente_id" class="form-control">
+                            <option value="">-- nessuno --</option>
+                            {% for d in docenti %}
+                                <option value="{{ d.id }}">{{ d.nome_docente }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="btn btn-success">Aggiungi</button>
+            </form>
+        </div>
+    </div>
+
+    <h4 class="mt-4">Elenco Giorni Speciali</h4>
+
+    <table class="table table-bordered mt-3">
+        <thead class="table-light">
+            <tr>
+                <th>Data</th>
+                <th>Classe</th>
+                <th>Materia</th>
+                <th>Ore</th>
+                <th>Docente</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for g in giorni %}
+            <tr>
+                <td>{{ g.data }}</td>
+                <td>{{ g.classe.nome_classe }}</td>
+                <td>{{ g.materia }}</td>
+                <td>{{ g.ore }}</td>
+                <td>
+                    {% if g.docente_id %}
+                        {{ g.docente.nome_docente }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ url_for('vincoli.edit_giorno_speciale', id=g.id) }}"
+                       class="btn btn-warning btn-sm">Modifica</a>
+
+                    <a href="{{ url_for('vincoli.delete_giorno_speciale', id=g.id) }}"
+                       class="btn btn-danger btn-sm">Elimina</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

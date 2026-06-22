@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-5 text-center">
+    <h1>Orario Scolastico</h1>
+    <p class="lead">Benvenuto nel sistema di gestione dell’orario.</p>
+
+    <div class="list-group mt-4">
+        <a href="/classi" class="list-group-item list-group-item-action">Gestione Classi</a>
+        <a href="/docenti" class="list-group-item list-group-item-action">Gestione Docenti</a>
+        <a href="/anni" class="list-group-item list-group-item-action">Anni Formativi</a>
+        <a href="/stage" class="list-group-item list-group-item-action">Stage</a>
+        <a href="/vincoli" class="list-group-item list-group-item-action">Vincoli</a>
+        <a href="{{ url_for('materie.lista_materie') }}" class="list-group-item list-group-item-action">
+            Materie
+        </a>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <!-- ========================= -->
+    <!-- VINCOLI GENERALI -->
+    <!-- ========================= -->
+    <h2>Vincoli Generali</h2>
+
+    <form action="{{ url_for('vincoli.crea_vincolo_generale') }}" method="POST" class="mb-4">
+        <div class="row">
+            <div class="col-md-10">
+                <input type="text" name="descrizione" class="form-control" placeholder="Descrizione vincolo generale" required>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100">Aggiungi</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-striped mb-5">
+        <thead>
+            <tr>
+                <th>Descrizione</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in vincoli_generali %}
+            <tr>
+                <td>{{ v.descrizione }}</td>
+                <td>
+                    <form action="{{ url_for('vincoli.elimina_vincolo_generale', vincolo_id=v.id) }}" method="POST">
+                        <button class="btn btn-danger btn-sm">Elimina</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <hr>
+
+    <!-- ========================= -->
+    <!-- GIORNI FISSI PER CLASSE -->
+    <!-- ========================= -->
+    <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
+        <h2>Giorni Fissi per Classe</h2>
+
+        <a href="{{ url_for('vincoli.giorni_fissi') }}" class="btn btn-info">
+            Giorni Fissi per Classe
+        </a>
+    </div>
+
+    <p class="text-muted">
+        Imposta un giorno fisso in cui una classe svolge una materia per un numero definito di ore (es: 1A → Martedì → 6 ore di laboratorio).
+    </p>
+
+    <hr>
+
+
+    <!-- ========================= -->
+    <!-- DISPONIBILITÀ DOCENTI -->
+    <!-- ========================= -->
+    <h2 class="mt-5">Disponibilità Docenti</h2>
+
+    <form action="{{ url_for('vincoli.crea_vincolo_docente') }}" method="POST" class="mb-4">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <label class="form-label">Docente</label>
+                <select name="docente_id" class="form-select" required>
+                    <option value="">Seleziona docente</option>
+                    {% for d in docenti %}
+                        <option value="{{ d.id }}">{{ d.nome_docente }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Giorno</label>
+                <select name="giorno" class="form-select" required>
+                    <option value="">Seleziona</option>
+                    {% for g in giorni %}
+                        <option>{{ g }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Da</label>
+                <input type="time" name="ora_da" class="form-control" required>
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">A</label>
+                <input type="time" name="ora_a" class="form-control" required>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+                <button class="btn btn-primary w-100">Aggiungi</button>
+            </div>
+
+        </div>
+
+    </form>
+
+    <h3>Disponibilità registrate</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Docente</th>
+                <th>Giorno</th>
+                <th>Da</th>
+                <th>A</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in vincoli_docenti %}
+            <tr>
+                <td>{{ v.docente.nome_docente }}</td>
+                <td>{{ v.giorno }}</td>
+                <td>{{ v.ora_da }}</td>
+                <td>{{ v.ora_a }}</td>
+                <td>
+                    <form action="{{ url_for('vincoli.elimina_vincolo_docente', vincolo_id=v.id) }}" method="POST">
+                        <button class="btn btn-danger btn-sm">Elimina</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

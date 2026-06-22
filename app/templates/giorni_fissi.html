@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Giorni Fissi per Classe</h2>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+            Aggiungi Giorno Fisso
+        </div>
+
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('vincoli.salva_giorno_fisso') }}">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-3">
+                        <label class="form-label">Classe</label>
+                        <select name="classe_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona --</option>
+                            {% for c in classi %}
+                            <option value="{{ c.id }}">{{ c.nome_classe }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Materia</label>
+                        <select name="materia_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona --</option>
+                            {% for m in materie %}
+                            <option value="{{ m.id }}">{{ m.nome }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Docente</label>
+                        <select name="docente_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona --</option>
+                            {% for d in docenti %}
+                                <option value="{{ d.id }}">{{ d.nome_docente }}</option>
+                            {% endfor %}
+                        </select>
+                        
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Giorno</label>
+                        <select name="giorno" class="form-control" required>
+                            <option value="lun">Lunedì</option>
+                            <option value="mar">Martedì</option>
+                            <option value="mer">Mercoledì</option>
+                            <option value="gio">Giovedì</option>
+                            <option value="ven">Venerdì</option>
+                            <option value="sab">Sabato</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Ore consecutive</label>
+                        <input type="number" name="ore" class="form-control" min="1" max="8" value="1" required>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary">Aggiungi</button>
+            </form>
+        </div>
+    </div>
+
+    <h4>Elenco Giorni Fissi</h4>
+
+    <table class="table table-bordered mt-3">
+        <thead class="table-light">
+            <tr>
+                <th>Classe</th>
+                <th>Materia</th>
+                <th>Docente</th>
+                <th>Giorno</th>
+                <th>Ore</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for gf in giorni_fissi %}
+            <tr>
+                <td>{{ gf.classe.nome_classe }}</td>
+                <td>{{ gf.materia.nome }}</td>
+                <td>{{ gf.docente.nome_docente }}</td>
+                <td>{{ gf.giorno }}</td>
+                <td>{{ gf.ore }}</td>
+                <td>
+                    <form method="POST" action="{{ url_for('vincoli.elimina_giorno_fisso', id=gf.id) }}">
+                        <button class="btn btn-danger btn-sm">Elimina</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

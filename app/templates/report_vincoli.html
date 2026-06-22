@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Report Vincoli</h2>
+
+    <p class="text-muted">
+        Analisi dell’ultimo calendario generato: disponibilità docenti, giorni fissi,
+        stage, giorni speciali, ore minime consecutive e buchi eccessivi.
+    </p>
+
+    <a href="{{ request.referrer or url_for('orario.lista_versioni') }}" 
+       class="btn btn-secondary mb-4">
+        ← Torna indietro
+    </a>
+
+    {% if not report %}
+        <div class="alert alert-info">
+            Nessun dato disponibile. Genera prima un calendario.
+        </div>
+
+    {% elif report|length == 1 and "TUTTO OK" in report[0] %}
+        <div class="alert alert-success text-center py-4 shadow-sm">
+            <h4 class="mb-0">{{ report[0] }}</h4>
+        </div>
+
+    {% else %}
+
+        <div class="alert alert-danger shadow-sm">
+            Sono stati trovati <strong>{{ report|length }}</strong> vincoli non rispettati.
+        </div>
+
+        {# --- CATEGORIZZAZIONE AUTOMATICA --- #}
+
+        {% set categorie = {
+            "docente": [],
+            "giorni_fissi": [],
+            "stage": [],
+            "speciali": [],
+            "ore_consecutive": [],
+            "buchi": [],
+            "altro": []
+        } %}
+
+        {% for r in report %}
+            {% if "non disponibile" in r %}
+                {% set _ = categorie.docente.append(r) %}
+            {% elif "giorno fisso" in r %}
+                {% set _ = categorie.giorni_fissi.append(r) %}
+            {% elif "STAGE" in r %}
+                {% set _ = categorie.stage.append(r) %}
+            {% elif "special" in r %}
+                {% set _ = categorie.speciali.append(r) %}
+            {% elif "4 ore consecutive" in r %}
+                {% set _ = categorie.ore_consecutive.append(r) %}
+            {% elif "buco" in r %}
+                {% set _ = categorie.buchi.append(r) %}
+            {% else %}
+                {% set _ = categorie.altro.append(r) %}
+            {% endif %}
+        {% endfor %}
+
+        {# --- SEZIONI ELEGANTI PER CATEGORIA --- #}
+
+        {% macro sezione(titolo, lista, colore, icona) %}
+            {% if lista|length > 0 %}
+                <div class="card mb-4 shadow-sm border-{{ colore }}">
+                    <div class="card-header bg-{{ colore }} text-white">
+                        <i class="bi {{ icona }}"></i> {{ titolo }} ({{ lista|length }})
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {% for item in lista %}
+                            <li class="list-group-item">{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endmacro %}
+
+        {{ sezione("Disponibilità Docenti", categorie.docente, "danger", "bi-person-x") }}
+        {{ sezione("Giorni Fissi", categorie.giorni_fissi, "primary", "bi-calendar-check") }}
+        {{ sezione("Stage", categorie.stage, "warning", "bi-briefcase") }}
+        {{ sezione("Giorni Speciali", categorie.speciali, "info", "bi-star") }}
+        {{ sezione("Ore Minime Consecutive", categorie.ore_consecutive, "success", "bi-clock-history") }}
+        {{ sezione("Buchi eccessivi", categorie.buchi, "secondary", "bi-hourglass-split") }}
+        {{ sezione("Altre Violazioni", categorie.altro, "dark", "bi-exclamation-triangle") }}
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

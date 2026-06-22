@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Generazione Calendario</h2>
+    <p>Premi il pulsante per avviare la generazione del calendario.</p>
+
+    <form action="{{ url_for('orario.genera_calendario') }}"
+          method="POST">
+        <button class="btn btn-success" type="submit">GENERA</button>
+    </form>
+
+    <hr>
+
+    <h3>Calendari già generati</h3>
+
+    {% if files %}
+        <ul class="list-group mt-3">
+            {% for f in files %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ f }}
+                    <a class="btn btn-primary btn-sm"
+                       href="{{ url_for('orario.download_calendario', filename=f) }}">
+                        Scarica
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-muted mt-3">Nessun calendario generato finora.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

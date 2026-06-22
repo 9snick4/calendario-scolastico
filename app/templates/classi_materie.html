@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Materie della Classe {{ classe.nome_classe }}</h2>
+
+    <div class="mb-3">
+        <a href="{{ url_for('classi.lista_classi') }}" class="btn btn-secondary">
+            Torna alle Classi
+        </a>
+    </div>
+
+    <!-- 🔥 TOTALE ORE ANNUALI -->
+    <div class="alert alert-info">
+        <strong>Totale ore annuali inserite:</strong> {{ totale_ore }}
+    </div>
+
+    <!-- FORM AGGIUNTA MATERIA ALLA CLASSE -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-success text-white">
+            Aggiungi Materia alla Classe
+        </div>
+
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('classi.crea_materia_classe', classe_id=classe.id) }}">
+
+                <div class="row mb-3">
+
+                    <!-- MATERIA -->
+                    <div class="col-md-4">
+                        <label class="form-label">Materia</label>
+                        <select name="materia_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona materia --</option>
+                            {% for m in materie %}
+                            <option value="{{ m.id }}">{{ m.nome }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- DOCENTE -->
+                    <div class="col-md-4">
+                        <label class="form-label">Docente</label>
+                        <select name="docente_id" class="form-control" required>
+                            <option value="" disabled selected>-- seleziona docente --</option>
+                            {% for d in docenti %}
+                            <option value="{{ d.id }}">{{ d.nome_docente }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- ORE ANNUALI -->
+                    <div class="col-md-2">
+                        <label class="form-label">Ore annuali</label>
+                        <input type="number" name="ore_annuali" class="form-control" min="1" max="1000" required>
+                    </div>
+
+                    <!-- ORE MINIME CONSECUTIVE -->
+                    <div class="col-md-2">
+                        <label class="form-label">Ore minime consecutive</label>
+                        <input type="number" name="ore_minime_consecutive" class="form-control"
+                               min="1" max="{{ classe.ore_massime_giornaliere }}" value="1" required>
+                    </div>
+
+                </div>
+
+                <button class="btn btn-success">Aggiungi</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 🔥 FORM MODIFICA MATERIE ESISTENTI -->
+    <h4>Materie Assegnate</h4>
+
+    <form method="POST" action="{{ url_for('classi.salva_modifiche_materie', classe_id=classe.id) }}">
+
+        <table class="table table-bordered mt-3">
+            <thead class="table-light">
+                <tr>
+                    <th>Materia</th>
+                    <th>Docente</th>
+                    <th>Ore annuali</th>
+                    <th>Ore Min consecutive</th>
+                    <th>Colore</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for mc in materie_classe %}
+                <tr>
+                    <td>{{ mc.materia.nome }}</td>
+
+                    <!-- DOCENTE MODIFICABILE -->
+                    <td>
+                        <select name="docente_{{ mc.id }}" class="form-select">
+                            {% for d in docenti %}
+                            <option value="{{ d.id }}" {% if d.id == mc.docente_id %}selected{% endif %}>
+                                {{ d.nome_docente }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </td>
+
+                    <!-- ORE ANNUALI MODIFICABILI -->
+                    <td>
+                        <input type="number" name="ore_{{ mc.id }}" class="form-control"
+                               value="{{ mc.ore_annuali }}" min="1" max="1000">
+                    </td>
+
+                    <!-- ORE MINIME CONSECUTIVE MODIFICABILI -->
+                    <td>
+                        <input type="number" name="minime_{{ mc.id }}" class="form-control"
+                               value="{{ mc.ore_minime_consecutive }}"
+                               min="1" max="{{ classe.ore_massime_giornaliere }}">
+                    </td>
+
+                    <td>
+                        <div style="width:30px; height:30px; background:{{ mc.materia.colore }}; border-radius:4px;"></div>
+                    </td>
+
+                    <td>
+                        <form method="POST" action="{{ url_for('classi.elimina_materia_classe', materia_classe_id=mc.id) }}">
+                            <button class="btn btn-danger btn-sm">Elimina</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- 🔥 BOTTONE SALVA GENERALE -->
+        <button class="btn btn-primary mt-3">SALVA MODIFICHE</button>
+
+    </form>
+
+</div>
+
+{% endblock %}
