@@ -12,12 +12,7 @@ def minimo_ore_giornata(data_g):
     Accetta sia stringhe 'YYYY-MM-DD' che datetime.date.
     """
 
-    # Se è già un datetime.date → ok
-    if isinstance(data_g, date):
-        data = data_g
-    else:
-        # Altrimenti è una stringa
-        data = datetime.strptime(data_g, "%Y-%m-%d").date()
+    data = data_g if isinstance(data_g, date) else datetime.strptime(data_g, "%Y-%m-%d").date()
 
     cutoff = date(data.year, 3, 1)
     return 6 if data < cutoff else 4
@@ -37,18 +32,14 @@ def slot_spostabile(slot):
         return False
     if slot.get("fisso"):
         return False
-    if slot.get("tipo") in ("SPECIALE", "STAGE", "FESTA"):
-        return False
-    return True
+    return slot.get("tipo") not in ("SPECIALE", "STAGE", "FESTA")
 
 
 def docente_puo_stare(docente_ok, docente_disponibile_global, docente_id, data, giorno_it, ora):
     """Controlla tutti i vincoli docente (inclusa occupazione globale)."""
     if docente_ok and not docente_ok(docente_id, data, giorno_it, ora, 1):
         return False
-    if not docente_disponibile_global(docente_id, data, ora):
-        return False
-    return True
+    return docente_disponibile_global(docente_id, data, ora)
 
 
 def marca_occupato_globale(docente_id, data, ora):
@@ -148,7 +139,7 @@ def giornata_valida(row):
         return True
 
     ore = sum(1 for slot in slots if slot)
-    if ore == 0 or ore == 2:
+    if ore in {0, 2}:
         return False
 
     consecutive = 0
@@ -241,10 +232,7 @@ def riequilibra_settimana(griglia, giorni_settimana, docente_ok, docente_disponi
     for g in giorni_settimana:
         data = g["data"]
         row = griglia[data]
-        if isinstance(row, dict):
-            slots = list(row.values())
-        else:
-            slots = list(row)
+        slots = list(row.values()) if isinstance(row, dict) else list(row)
         conteggi[data] = sum(1 for s in slots if s)
 
     media = sum(conteggi.values()) / len(conteggi)
@@ -281,13 +269,12 @@ def riequilibra_settimana(griglia, giorni_settimana, docente_ok, docente_disponi
                 docente_id = slot["docente_id"]
 
                 for j in range(len(slots_v)):
-                    if slots_v[j] is None:
-
-                        if docente_puo_stare(docente_ok, docente_disponibile_global,
-                                             docente_id, d_vuoto, giorno_it_v, j):
-                            slots_v[j] = slot
-                            slots_p[i] = None
-                            break
+                    if slots_v[j] is None and docente_puo_stare(
+                        docente_ok, docente_disponibile_global, docente_id, d_vuoto, giorno_it_v, j
+                    ):
+                        slots_v[j] = slot
+                        slots_p[i] = None
+                        break
 
             # Ricostruisci nel formato originale
             if isinstance(row_p, dict):

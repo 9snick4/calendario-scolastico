@@ -5,7 +5,14 @@ from datetime import timedelta
 
 # 🔥 IMPORTA L’UNICA OCCUPAZIONE GLOBALE
 import app.utils.occupazione as occ
-from app.models import AnnoFormativo, Classe, Docente, GiornoFisso, Materia, MateriaClasse
+from app.models import (
+    AnnoFormativo,
+    Classe,
+    Docente,
+    GiornoFisso,
+    Materia,
+    MateriaClasse,
+)
 from app.utils.orario_utils import label_giorno_it, normalizza_giorno_it
 
 

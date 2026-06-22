@@ -288,10 +288,13 @@ def valida_motore(griglie, settimane_classe, ore_giornaliere):
                 slot = ore[ora]
                 next_slot = ore[ora + 1]
 
-                if isinstance(slot, dict) and isinstance(next_slot, dict):
-                    if slot["materia"] == next_slot["materia"] and slot["docente_id"] != next_slot["docente_id"]:
-                        errori.append(
-                            f"[BLOCCO SPEZZATO] Classe {cid} il {data} tra ora {ora} e {ora+1}"
-                        )
+                if (
+                    isinstance(slot, dict) and isinstance(next_slot, dict)
+                    and slot["materia"] == next_slot["materia"]
+                    and slot["docente_id"] != next_slot["docente_id"]
+                ):
+                    errori.append(
+                        f"[BLOCCO SPEZZATO] Classe {cid} il {data} tra ora {ora} e {ora+1}"
+                    )
 
     return errori

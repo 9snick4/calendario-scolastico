@@ -30,31 +30,22 @@
 </style></head><body>
 <header>
   <h1>Lint Report — calendario-scolastico</h1>
-  <div class="sub">C:\Users\nicot\Desktop\backup_mattia\project\devops\calendario-scolastico · 2026-06-22T10:26:50.161Z · Languages: python</div>
+  <div class="sub">C:\Users\nicot\Desktop\backup_mattia\project\devops\calendario-scolastico · 2026-06-22T11:03:20.217Z · Languages: python</div>
 </header>
 <div class="summary">
   <div class="stat err"><strong>7</strong> errors</div>
-  <div class="stat warn"><strong>246</strong> warnings</div>
-  <div class="stat"><strong>26</strong> files</div>
-  <div class="stat auto"><strong>45</strong> auto-fixable</div>
-  <div class="stat sub"><strong>26</strong> sub-agent</div>
-  <div class="stat human"><strong>182</strong> human</div>
+  <div class="stat warn"><strong>305</strong> warnings</div>
+  <div class="stat"><strong>50</strong> files</div>
+  <div class="stat auto"><strong>1</strong> auto-fixable</div>
+  <div class="stat sub"><strong>0</strong> sub-agent</div>
+  <div class="stat human"><strong>311</strong> human</div>
 </div>
 <table>
   <thead><tr><th>File</th><th>L:C</th><th>Lang</th><th>Sev</th><th>Rule</th><th>Message</th><th>Fix</th></tr></thead>
   <tbody>
     <tr class="sev-warning">
       <td><code>app\__init__.py</code></td>
-      <td>15:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM105</code></td>
-      <td>Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\__init__.py</code></td>
-      <td>16:9</td>
+      <td>17:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH103</code></td>
@@ -63,7 +54,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\__init__.py</code></td>
-      <td>21:15</td>
+      <td>20:15</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH118</code></td>
@@ -72,11 +63,20 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\__init__.py</code></td>
-      <td>25:32</td>
+      <td>24:32</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>S105</code></td>
       <td>Possible hardcoded password assigned to: &quot;SECRET_KEY&quot;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>34:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
@@ -145,15 +145,6 @@
     <tr class="sev-warning">
       <td><code>app\__init__.py</code></td>
       <td>42:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>PLC0415</code></td>
-      <td>`import` should be at the top-level of a file</td>
-      <td><span class="fix fix-human">human</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\__init__.py</code></td>
-      <td>43:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLC0415</code></td>
@@ -167,29 +158,20 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\classi.py</code></td>
-      <td>161:30</td>
+      <td>162:30</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\routes\classi.py</code></td>
-      <td>178:17</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>E712</code></td>
-      <td>Avoid equality comparisons to `False`; use `not Materia.is_professionale:` for false checks</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>43:20</td>
+      <td>44:20</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -198,7 +180,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>66:19</td>
+      <td>67:19</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH118</code></td>
@@ -207,7 +189,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>67:5</td>
+      <td>68:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH103</code></td>
@@ -216,7 +198,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>71:16</td>
+      <td>72:16</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH118</code></td>
@@ -225,7 +207,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>85:19</td>
+      <td>86:19</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH118</code></td>
@@ -234,7 +216,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>86:5</td>
+      <td>87:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH103</code></td>
@@ -243,7 +225,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>88:20</td>
+      <td>89:20</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH208</code></td>
@@ -252,7 +234,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>98:14</td>
+      <td>99:14</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH118</code></td>
@@ -261,7 +243,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>112:20</td>
+      <td>113:20</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -270,7 +252,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>151:5</td>
+      <td>152:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -279,16 +261,16 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>151:5</td>
+      <td>152:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (16 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>168:21</td>
+      <td>169:21</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E741</code></td>
@@ -297,7 +279,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>170:25</td>
+      <td>171:25</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF401</code></td>
@@ -306,7 +288,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>176:21</td>
+      <td>177:21</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E741</code></td>
@@ -315,7 +297,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>178:25</td>
+      <td>179:25</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF401</code></td>
@@ -324,7 +306,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>184:39</td>
+      <td>185:39</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E741</code></td>
@@ -333,7 +315,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>190:22</td>
+      <td>191:22</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E741</code></td>
@@ -342,7 +324,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\orario.py</code></td>
-      <td>228:5</td>
+      <td>229:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLC0415</code></td>
@@ -351,25 +333,16 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\routes\stage.py</code></td>
-      <td>44:64</td>
+      <td>45:64</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `–` (EN DASH). Did you mean `-` (HYPHEN-MINUS)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\__init__.py</code></td>
-      <td>15:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM105</code></td>
-      <td>Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\__init__.py</code></td>
-      <td>16:9</td>
+      <td>17:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH103</code></td>
@@ -378,7 +351,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\__init__.py</code></td>
-      <td>21:15</td>
+      <td>20:15</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PTH118</code></td>
@@ -387,11 +360,20 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\__init__.py</code></td>
-      <td>25:32</td>
+      <td>24:32</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>S105</code></td>
       <td>Possible hardcoded password assigned to: &quot;SECRET_KEY&quot;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>34:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
@@ -460,15 +442,6 @@
     <tr class="sev-warning">
       <td><code>app\utils\__init__.py</code></td>
       <td>42:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>PLC0415</code></td>
-      <td>`import` should be at the top-level of a file</td>
-      <td><span class="fix fix-human">human</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\__init__.py</code></td>
-      <td>43:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLC0415</code></td>
@@ -491,7 +464,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (63 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generato070326r.py</code></td>
@@ -500,7 +473,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `classi` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generato070326r.py</code></td>
@@ -509,7 +482,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `docenti_dict` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generato070326r.py</code></td>
@@ -518,7 +491,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `nomi_non_prof` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generato070326r.py</code></td>
@@ -594,25 +567,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>40:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM103</code></td>
-      <td>Return the condition `tg in (&quot;STAGE&quot;, &quot;FESTA&quot;, &quot;SPECIALE&quot;)` directly</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\calendario_generator.py</code></td>
       <td>68:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM103</code></td>
-      <td>Return the condition `not (not same_before and not same_after)` directly</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\calendario_generator.py</code></td>
-      <td>74:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -621,7 +576,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>97:21</td>
+      <td>91:21</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF401</code></td>
@@ -630,7 +585,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>158:5</td>
+      <td>152:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -639,25 +594,25 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>158:5</td>
+      <td>152:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (27 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>158:5</td>
+      <td>152:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (84 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>349:5</td>
+      <td>343:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -666,25 +621,25 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>349:5</td>
+      <td>343:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (35 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>349:5</td>
+      <td>343:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (80 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>370:24</td>
+      <td>364:24</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -693,7 +648,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>582:5</td>
+      <td>576:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -702,43 +657,43 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>582:5</td>
+      <td>576:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (93 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>589:9</td>
+      <td>583:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `classi` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>591:9</td>
+      <td>585:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `docenti_dict` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>592:9</td>
+      <td>586:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `nomi_non_prof` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>655:9</td>
+      <td>649:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -747,7 +702,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>733:9</td>
+      <td>727:9</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLC0415</code></td>
@@ -756,7 +711,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>745:20</td>
+      <td>739:20</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -765,7 +720,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>771:5</td>
+      <td>765:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLC0415</code></td>
@@ -774,7 +729,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\calendario_generator.py</code></td>
-      <td>776:20</td>
+      <td>770:20</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -788,7 +743,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\diagnostica.py</code></td>
@@ -860,7 +815,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF002</code></td>
       <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\festivita_handler.py</code></td>
@@ -869,7 +824,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM110</code></td>
       <td>Use `return any(f.data_inizio &lt;= data &lt;= f.data_fine for f in festivita)` instead of `for` loop</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\fixed_days_handler.py</code></td>
@@ -887,7 +842,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (18 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\funziona_ordinary040326.py</code></td>
@@ -914,7 +869,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (79 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\funziona_ordinary040326.py</code></td>
@@ -923,7 +878,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (178 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\funziona_ordinary040326.py</code></td>
@@ -1022,7 +977,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF002</code></td>
       <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\occupazione.py</code></td>
@@ -1040,7 +995,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM110</code></td>
       <td>Use `return any(f.data_inizio &lt;= data &lt;= f.data_fine for f in festivita)` instead of `for` loop</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\orario_utils.py</code></td>
@@ -1058,7 +1013,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM110</code></td>
       <td>Use `return all(griglia[data][i] is None for i in range(start, start + blocco))` instead of `for` loop</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\orario_utils.py</code></td>
@@ -1067,7 +1022,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF002</code></td>
       <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
@@ -1076,7 +1031,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
@@ -1107,16 +1062,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>150:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM103</code></td>
-      <td>Return the condition directly</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>156:5</td>
+      <td>153:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -1125,25 +1071,25 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>156:5</td>
+      <td>153:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (27 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>156:5</td>
+      <td>153:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (64 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>165:23</td>
+      <td>162:23</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -1152,16 +1098,16 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>221:31</td>
+      <td>218:31</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>257:30</td>
+      <td>254:30</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1170,7 +1116,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>325:31</td>
+      <td>322:31</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1179,7 +1125,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>384:31</td>
+      <td>381:31</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1188,7 +1134,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>480:23</td>
+      <td>477:23</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -1197,7 +1143,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement.py</code></td>
-      <td>481:23</td>
+      <td>478:23</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PERF102</code></td>
@@ -1300,7 +1246,7 @@
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
-      <td>`final_cleanup_safe` is too complex (19 &gt; 12)</td>
+      <td>`final_cleanup_safe` is too complex (18 &gt; 12)</td>
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
@@ -1309,8 +1255,8 @@
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
-      <td>Too many branches (19 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td>Too many branches (18 &gt; 15)</td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement030326.py</code></td>
@@ -1332,16 +1278,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement030326.py</code></td>
-      <td>139:13</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM102</code></td>
-      <td>Use a single `if` statement instead of nested `if` statements</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\ordinary_placement030326.py</code></td>
-      <td>143:51</td>
+      <td>146:47</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E701</code></td>
@@ -1350,7 +1287,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement030326.py</code></td>
-      <td>153:45</td>
+      <td>156:45</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E701</code></td>
@@ -1359,7 +1296,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement030326.py</code></td>
-      <td>162:27</td>
+      <td>165:27</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E701</code></td>
@@ -1368,7 +1305,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement030326.py</code></td>
-      <td>169:35</td>
+      <td>172:35</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E701</code></td>
@@ -1377,7 +1314,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_placement030326.py</code></td>
-      <td>204:52</td>
+      <td>207:52</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E701</code></td>
@@ -1400,7 +1337,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (70 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_pulp.py</code></td>
@@ -1409,7 +1346,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (152 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\ordinary_pulp.py</code></td>
@@ -1530,43 +1467,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>40:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM103</code></td>
-      <td>Return the negated condition directly</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>49:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM103</code></td>
-      <td>Return the condition `docente_disponibile_global(docente_id, data, ora)` directly</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>151:8</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>PLR1714</code></td>
-      <td>Consider merging multiple comparisons: `ore in {0, 2}`.</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>151:27</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>PLR2004</code></td>
-      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
-      <td><span class="fix fix-human">human</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>158:31</td>
+      <td>154:31</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1575,43 +1476,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>229:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>C901</code></td>
-      <td>`riequilibra_settimana` is too complex (14 &gt; 12)</td>
-      <td><span class="fix fix-human">human</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>229:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>PLR0912</code></td>
-      <td>Too many branches (18 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>244:9</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM108</code></td>
-      <td>Use ternary operator `slots = list(row.values()) if isinstance(row, dict) else list(row)` instead of `if`-`else`-block</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>284:21</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM102</code></td>
-      <td>Use a single `if` statement instead of nested `if` statements</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>328:5</td>
+      <td>320:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>N806</code></td>
@@ -1620,21 +1485,21 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>340:24</td>
+      <td>332:24</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `ore_keys` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\post_ordinary_optimizer.py</code></td>
-      <td>340:34</td>
+      <td>332:34</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF059</code></td>
       <td>Unpacked variable `is_dict` is never used</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
@@ -1647,16 +1512,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>29:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM103</code></td>
-      <td>Return the negated condition directly</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\provaO.py</code></td>
-      <td>49:19</td>
+      <td>46:19</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1665,7 +1521,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>57:31</td>
+      <td>54:31</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1674,7 +1530,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>78:28</td>
+      <td>75:28</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1683,7 +1539,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>85:31</td>
+      <td>82:31</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1692,7 +1548,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>92:1</td>
+      <td>89:1</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E402</code></td>
@@ -1701,7 +1557,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>161:5</td>
+      <td>158:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -1710,16 +1566,16 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>161:5</td>
+      <td>158:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (16 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>283:5</td>
+      <td>280:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -1728,7 +1584,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>310:36</td>
+      <td>307:36</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1737,7 +1593,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>369:5</td>
+      <td>366:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -1746,25 +1602,25 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>369:5</td>
+      <td>366:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (27 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>369:5</td>
+      <td>366:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (69 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>389:74</td>
+      <td>386:74</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1773,7 +1629,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>389:82</td>
+      <td>386:82</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1782,7 +1638,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>394:44</td>
+      <td>391:44</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1791,7 +1647,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>394:53</td>
+      <td>391:53</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1800,7 +1656,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>394:76</td>
+      <td>391:76</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1809,7 +1665,7 @@
     </tr>
     <tr class="sev-error">
       <td><code>app\utils\provaO.py</code></td>
-      <td>450:32</td>
+      <td>447:32</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-error">error</span></td>
       <td><code>FURB171</code></td>
@@ -1818,7 +1674,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>522:5</td>
+      <td>519:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -1827,25 +1683,25 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>522:5</td>
+      <td>519:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (26 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>522:5</td>
+      <td>519:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (67 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>539:63</td>
+      <td>536:63</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1854,7 +1710,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>540:63</td>
+      <td>537:63</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -1863,7 +1719,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>556:78</td>
+      <td>553:78</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1872,7 +1728,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>556:86</td>
+      <td>553:86</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1881,7 +1737,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>560:48</td>
+      <td>557:48</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1890,7 +1746,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>560:57</td>
+      <td>557:57</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1899,7 +1755,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>560:86</td>
+      <td>557:86</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1908,7 +1764,7 @@
     </tr>
     <tr class="sev-error">
       <td><code>app\utils\provaO.py</code></td>
-      <td>588:28</td>
+      <td>585:28</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-error">error</span></td>
       <td><code>FURB171</code></td>
@@ -1917,7 +1773,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>660:5</td>
+      <td>657:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -1926,25 +1782,25 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>660:5</td>
+      <td>657:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (27 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>660:5</td>
+      <td>657:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0915</code></td>
       <td>Too many statements (67 &gt; 60)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>680:74</td>
+      <td>677:74</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1953,7 +1809,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>680:82</td>
+      <td>677:82</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1962,7 +1818,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>684:44</td>
+      <td>681:44</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1971,7 +1827,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>684:53</td>
+      <td>681:53</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1980,7 +1836,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>684:76</td>
+      <td>681:76</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>B023</code></td>
@@ -1989,7 +1845,7 @@
     </tr>
     <tr class="sev-error">
       <td><code>app\utils\provaO.py</code></td>
-      <td>735:32</td>
+      <td>732:32</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-error">error</span></td>
       <td><code>FURB171</code></td>
@@ -1998,7 +1854,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>802:1</td>
+      <td>799:1</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>E402</code></td>
@@ -2007,7 +1863,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>862:5</td>
+      <td>859:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>N806</code></td>
@@ -2016,7 +1872,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\provaO.py</code></td>
-      <td>936:5</td>
+      <td>933:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
@@ -2039,7 +1895,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
       <td>Too many branches (17 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\stage_handler.py</code></td>
@@ -2048,7 +1904,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF002</code></td>
       <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
@@ -2057,7 +1913,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0911</code></td>
       <td>Too many return statements (8 &gt; 6)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
@@ -2066,7 +1922,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM110</code></td>
       <td>Use `return all(docente_disponibile(docente_id_norm, giorno_it, i) for i in range(ora, ora + blocco))` instead of `for` loop</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
@@ -2075,15 +1931,6 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM110</code></td>
       <td>Use `return any(row[o] is None and o != ora for o in range(prima, ultima + 1))` instead of `for` loop</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>105:5</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>C901</code></td>
-      <td>`compatta_giornata` is too complex (13 &gt; 12)</td>
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
@@ -2097,25 +1944,16 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>157:9</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM102</code></td>
-      <td>Use a single `if` statement instead of nested `if` statements</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>182:5</td>
+      <td>183:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
-      <td>`ottimizza_settimana_classe` is too complex (14 &gt; 12)</td>
+      <td>`ottimizza_settimana_classe` is too complex (13 &gt; 12)</td>
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>190:5</td>
+      <td>191:5</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLC0415</code></td>
@@ -2124,7 +1962,7 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>207:56</td>
+      <td>208:56</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
@@ -2133,21 +1971,12 @@
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>208:52</td>
+      <td>209:52</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR2004</code></td>
       <td>Magic value used in comparison, consider replacing `5` with a constant variable</td>
       <td><span class="fix fix-human">human</span></td>
-    </tr>
-    <tr class="sev-warning">
-      <td><code>app\utils\utils_scheduler.py</code></td>
-      <td>231:25</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM102</code></td>
-      <td>Use a single `if` statement instead of nested `if` statements</td>
-      <td><span class="fix fix-auto">auto</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2227,7 +2056,7 @@
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>C901</code></td>
-      <td>`valida_motore` is too complex (29 &gt; 12)</td>
+      <td>`valida_motore` is too complex (28 &gt; 12)</td>
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
@@ -2236,8 +2065,8 @@
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>PLR0912</code></td>
-      <td>Too many branches (29 &gt; 15)</td>
-      <td><span class="fix fix-subagent">subagent</span></td>
+      <td>Too many branches (28 &gt; 15)</td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2255,7 +2084,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM118</code></td>
       <td>Use `key in dict` instead of `key in dict.keys()`</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2264,7 +2093,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2273,7 +2102,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2282,7 +2111,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>RUF003</code></td>
       <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2291,7 +2120,7 @@
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>SIM118</code></td>
       <td>Use `key in dict` instead of `key in dict.keys()`</td>
-      <td><span class="fix fix-auto">auto</span></td>
+      <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
       <td><code>app\utils\validator.py</code></td>
@@ -2303,21 +2132,723 @@
       <td><span class="fix fix-human">human</span></td>
     </tr>
     <tr class="sev-warning">
-      <td><code>app\utils\validator.py</code></td>
-      <td>291:17</td>
-      <td><span class="lang lang-python">python</span></td>
-      <td><span class="sev sev-warning">warning</span></td>
-      <td><code>SIM102</code></td>
-      <td>Use a single `if` statement instead of nested `if` statements</td>
-      <td><span class="fix fix-auto">auto</span></td>
-    </tr>
-    <tr class="sev-warning">
       <td><code>config.py</code></td>
       <td>3:18</td>
       <td><span class="lang lang-python">python</span></td>
       <td><span class="sev sev-warning">warning</span></td>
       <td><code>S105</code></td>
       <td>Possible hardcoded password assigned to: &quot;SECRET_KEY&quot;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\models.py</code></td>
+      <td>19:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;classe_associata&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\models.py</code></td>
+      <td>22:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;materie_assegnate&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\models.py</code></td>
+      <td>40:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;insegnamenti&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\models.py</code></td>
+      <td>79:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-class</code></td>
+      <td>unused class &#39;Vincolo&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\models.py</code></td>
+      <td>94:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-class</code></td>
+      <td>unused class &#39;OrarioGenerato&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\anni.py</code></td>
+      <td>20:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;gestione_anno&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\anni.py</code></td>
+      <td>117:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;reset_anno&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\anni.py</code></td>
+      <td>137:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;reset_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>13:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;lista_classi&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>50:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;elimina_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>99:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;crea_materia_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>128:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;elimina_materia_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>143:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;salva_modifiche_materie&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\docenti.py</code></td>
+      <td>9:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;lista_docenti&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\docenti.py</code></td>
+      <td>15:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;crea_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\docenti.py</code></td>
+      <td>30:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;modifica_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\docenti.py</code></td>
+      <td>46:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;elimina_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\festivita.py</code></td>
+      <td>9:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;gestione_festivita&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\festivita.py</code></td>
+      <td>40:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;elimina_festivita&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\home.py</code></td>
+      <td>5:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;home&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\materie.py</code></td>
+      <td>7:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;lista_materie&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\materie.py</code></td>
+      <td>38:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;delete_materia&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>31:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;REPORT_VINCOLI&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>37:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;genera_calendario&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>83:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;lista_versioni&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>97:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;download_calendario&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>106:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;export_xls&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>111:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-attribute</code></td>
+      <td>unused attribute &#39;title&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>151:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;report_vincoli&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>214:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;delete_stage&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>227:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;diagnostica&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\stage.py</code></td>
+      <td>11:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;gestione_stage&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\stage.py</code></td>
+      <td>18:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;salva_stage&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>31:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;index&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>39:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;vincoli_docenti&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>65:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;delete_vincolo_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>122:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;edit_giorno_speciale&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>150:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;delete_giorno_speciale&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>162:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;disponibilita_annua&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>186:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;delete_disponibilita_annua&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>214:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;salva_giorno_fisso&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\vincoli.py</code></td>
+      <td>259:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;elimina_giorno_fisso&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\associazioni_loader.py</code></td>
+      <td>6:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;carica_associazioni_parallele&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\associazioni_loader.py</code></td>
+      <td>41:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;genera_doc_est_map&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>55:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;diagnostica_ultimo_calendario&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\duplica_classi_parallele.py</code></td>
+      <td>6:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;duplica_classi_parallele&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>204:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;apply_ordinary_pulp&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>552:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;count_ore_docente_in_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>562:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;crea_buco_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>569:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;registra_occupazione&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>569:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;kwargs&#39; (100% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\occupazione.py</code></td>
+      <td>70:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;occupa_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\occupazione.py</code></td>
+      <td>77:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;libera_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>175:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;periodo_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>194:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;slot_libero&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>338:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;sincronizza_classi_associate&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>405:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;fase5_riempimento_forzato&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>180:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;apply_ordinary&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>206:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;count_ore_docente_in_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>210:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;crea_buco_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>215:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;registra_occupazione&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>215:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;kwargs&#39; (100% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>17:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;apply_ordinary_pulp&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>225:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;riequilibra_settimana&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>302:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;ottimizza_post_ordinario&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>64:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;giornata_legale&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>253:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;count_ore_docente_in_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>263:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;crea_buco_docente&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>272:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;count_ore_in_giornata&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>802:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;apply_ordinary&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>1009:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;registra_occupazione&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>1009:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;kwargs&#39; (100% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>66:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;durata&#39; (100% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>183:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;ottimizza_settimana_classe&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>149:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-function</code></td>
+      <td>unused function &#39;aggiorna_occupazione_post_sync&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>config.py</code></td>
+      <td>2:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-class</code></td>
+      <td>unused class &#39;Config&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>config.py</code></td>
+      <td>3:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;SECRET_KEY&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>config.py</code></td>
+      <td>4:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;SQLALCHEMY_DATABASE_URI&#39; (60% confidence)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>config.py</code></td>
+      <td>5:0</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>VUL-unused-variable</code></td>
+      <td>unused variable &#39;SQLALCHEMY_TRACK_MODIFICATIONS&#39; (60% confidence)</td>
       <td><span class="fix fix-human">human</span></td>
     </tr></tbody>
 </table>

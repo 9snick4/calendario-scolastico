@@ -1,7 +1,8 @@
 # app/routes/classi.py
 
-from app.models import Classe, Docente, Materia, MateriaClasse, db
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+
+from app.models import Classe, Docente, Materia, MateriaClasse, db
 
 classi_bp = Blueprint("classi", __name__, url_prefix="/classi")
 
@@ -175,7 +176,7 @@ def salva_modifiche_materie(classe_id):
             .join(Materia)
             .filter(
                 MateriaClasse.classe_id == classe_assoc.id,
-                Materia.is_professionale == False
+                not Materia.is_professionale
             )
             .all()
         )

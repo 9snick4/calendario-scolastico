@@ -37,10 +37,7 @@ def _slot_intoccabile(cd, data_g, h):
     # tipo giorno bloccante
     tipo_giorno = cd.get("tipo_giorno", {})
     tg = tipo_giorno.get(data_g)
-    if tg in ("STAGE", "FESTA", "SPECIALE"):
-        return True
-
-    return False
+    return tg in ("STAGE", "FESTA", "SPECIALE")
 
 
 def _rispetta_ore_minime_consecutive(row, h, materia_id, ore_minime, ore_g):
@@ -65,10 +62,7 @@ def _rispetta_ore_minime_consecutive(row, h, materia_id, ore_minime, ore_g):
         and row[h + 1].get("materia_id") == materia_id
     )
 
-    if not same_before and not same_after:
-        return False
-
-    return True
+    return not (not same_before and not same_after)
 
 
 def fallback_riempimento_buchi(cd, docente_ok_wrapper):

@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from app.models import Festivita, db
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+
+from app.models import Festivita, db
 
 festivita_bp = Blueprint("festivita", __name__, url_prefix="/festivita")
 

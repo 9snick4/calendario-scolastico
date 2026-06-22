@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from app.models import AnnoFormativo, CalendarioClasse, Classe, db
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+
+from app.models import AnnoFormativo, CalendarioClasse, Classe, db
 
 anni_bp = Blueprint("anni", __name__, url_prefix="/anni")
 

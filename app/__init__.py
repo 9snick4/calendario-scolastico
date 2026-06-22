@@ -1,3 +1,4 @@
+import contextlib
 import os
 
 from flask import Flask
@@ -12,10 +13,8 @@ def create_app():
     app = Flask(__name__, instance_relative_config=True)
 
     # Assicura che la cartella instance esista
-    try:
+    with contextlib.suppress(OSError):
         os.makedirs(app.instance_path, exist_ok=True)
-    except OSError:
-        pass
 
     # Percorso del database dentro instance/
     db_path = os.path.join(app.instance_path, "orario_scolastico.db")

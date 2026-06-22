@@ -136,17 +136,20 @@ def final_cleanup_safe(griglie, ore_max, materie_info, classe_id):
             if not ore_presenti: continue
 
             # Se < target, svuota e restituisci debito (solo se non è fine anno)
-            if len(ore_presenti) < target and sum(m["debito_residuo"] for m in materie_info.values()) > 0:
-                if not any(s and s.get("fisso") for s in row):
-                    for h, s in enumerate(row):
-                        if s and not s.get("fisso"):
-                            if s.get("docente_id"): occ.libera(s["docente_id"], data, h)
-                            mid = s.get("materia_id")
-                            if mid in materie_info:
-                                materie_info[mid]["debito_residuo"] += 1
-                                materie_info[mid]["ore_assegnate"] -= 1
-                            row[h] = None
-                    continue
+            if (
+                len(ore_presenti) < target
+                and sum(m["debito_residuo"] for m in materie_info.values()) > 0
+                and not any(s and s.get("fisso") for s in row)
+            ):
+                for h, s in enumerate(row):
+                    if s and not s.get("fisso"):
+                        if s.get("docente_id"): occ.libera(s["docente_id"], data, h)
+                        mid = s.get("materia_id")
+                        if mid in materie_info:
+                            materie_info[mid]["debito_residuo"] += 1
+                            materie_info[mid]["ore_assegnate"] -= 1
+                        row[h] = None
+                continue
 
             # Compattazione protetta
             for h, s in enumerate(row):

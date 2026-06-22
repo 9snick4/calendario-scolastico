@@ -5,14 +5,6 @@ from datetime import datetime
 from io import BytesIO
 
 import openpyxl
-from app.models import (
-    Docente,
-    GiornoFisso,
-    Stage,
-    db,
-)
-from app.utils import orario_utils
-from app.utils.calendario_generator import genera_calendario_annuale
 from flask import (
     Blueprint,
     current_app,
@@ -24,6 +16,15 @@ from flask import (
     send_from_directory,
     url_for,
 )
+
+from app.models import (
+    Docente,
+    GiornoFisso,
+    Stage,
+    db,
+)
+from app.utils import orario_utils
+from app.utils.calendario_generator import genera_calendario_annuale
 
 orario_bp = Blueprint("orario", __name__, url_prefix="/orario")
 

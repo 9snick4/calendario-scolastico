@@ -1,0 +1,6522 @@
+{
+  "project": "C:\\Users\\nicot\\Desktop\\backup_mattia\\project\\devops\\calendario-scolastico",
+  "generatedAt": "2026-06-22T11:02:26.862Z",
+  "languages": [
+    "python"
+  ],
+  "summary": {
+    "errors": 7,
+    "warnings": 315,
+    "files": 55
+  },
+  "issues": [
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 17,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "PTH103",
+      "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 20,
+      "col": 15,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 24,
+      "col": 32,
+      "severity": "warning",
+      "ruleId": "S105",
+      "message": "Possible hardcoded password assigned to: \"SECRET_KEY\"",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 34,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 35,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 36,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 37,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 38,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 39,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 40,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 41,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\__init__.py",
+      "line": 42,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\models.py",
+      "line": 17,
+      "col": 35,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\anni.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 3,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 161,
+      "col": 30,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\docenti.py",
+      "line": 2,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\festivita.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\materie.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 3,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 43,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 66,
+      "col": 19,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 67,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PTH103",
+      "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 71,
+      "col": 16,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 85,
+      "col": 19,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 86,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PTH103",
+      "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 88,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PTH208",
+      "message": "Use `pathlib.Path.iterdir()` instead.",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 98,
+      "col": 14,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 112,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 151,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`report_vincoli` is too complex (17 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 151,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (16 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 168,
+      "col": 21,
+      "severity": "warning",
+      "ruleId": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 170,
+      "col": 25,
+      "severity": "warning",
+      "ruleId": "PERF401",
+      "message": "Use `list.extend` to create a transformed list",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 176,
+      "col": 21,
+      "severity": "warning",
+      "ruleId": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 178,
+      "col": 25,
+      "severity": "warning",
+      "ruleId": "PERF401",
+      "message": "Use `list.extend` to create a transformed list",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 184,
+      "col": 39,
+      "severity": "warning",
+      "ruleId": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 190,
+      "col": 22,
+      "severity": "warning",
+      "ruleId": "E741",
+      "message": "Ambiguous variable name: `l`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 228,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\stage.py",
+      "line": 2,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\stage.py",
+      "line": 44,
+      "col": 64,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `–` (EN DASH). Did you mean `-` (HYPHEN-MINUS)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "I001",
+      "message": "Import block is un-sorted or un-formatted",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 17,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "PTH103",
+      "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 20,
+      "col": 15,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 24,
+      "col": 32,
+      "severity": "warning",
+      "ruleId": "S105",
+      "message": "Possible hardcoded password assigned to: \"SECRET_KEY\"",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 34,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 35,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 36,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 37,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 38,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 39,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 40,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 41,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\__init__.py",
+      "line": 42,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 29,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`genera_calendario_annuale` is too complex (19 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 29,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (63 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 36,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `classi` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 38,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `docenti_dict` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 39,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `nomi_non_prof` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 114,
+      "col": 101,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 148,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 181,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generato070326r.py",
+      "line": 186,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 16,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 17,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 22,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 23,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 68,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`fallback_riempimento_buchi` is too complex (15 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 91,
+      "col": 21,
+      "severity": "warning",
+      "ruleId": "PERF401",
+      "message": "Use `list.extend` to create a transformed list",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 152,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`fase6_ribilanciamento` is too complex (31 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 152,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (27 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 152,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (84 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 343,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`fase7_ribilanciamento_interclassi` is too complex (35 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 343,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (35 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 343,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (80 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 364,
+      "col": 24,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 576,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`genera_calendario_annuale` is too complex (27 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 576,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (93 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 583,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `classi` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 585,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `docenti_dict` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 586,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `nomi_non_prof` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 649,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`piazzamento_ordinario` is too complex (16 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 727,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 739,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 765,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\calendario_generator.py",
+      "line": 770,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\class_setup.py",
+      "line": 6,
+      "col": 14,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 11,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`diagnostica_sovrapposizioni` is too complex (13 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 15,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 56,
+      "col": 14,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 57,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PTH208",
+      "message": "Use `pathlib.Path.iterdir()` instead.",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 63,
+      "col": 12,
+      "severity": "warning",
+      "ruleId": "PTH118",
+      "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 87,
+      "col": 45,
+      "severity": "error",
+      "ruleId": "F821",
+      "message": "Undefined name `giorno_label_prev`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 202,
+      "col": 24,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\duplica_classi_parallele.py",
+      "line": 10,
+      "col": 30,
+      "severity": "warning",
+      "ruleId": "RUF002",
+      "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\festivita_handler.py",
+      "line": 10,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "SIM110",
+      "message": "Use `return any(f.data_inizio <= data <= f.data_fine for f in festivita)` instead of `for` loop",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\fixed_days_handler.py",
+      "line": 11,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`apply_fixed_days` is too complex (19 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\fixed_days_handler.py",
+      "line": 11,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (18 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 104,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`_greedy_fallback` is too complex (16 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 204,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`apply_ordinary_pulp` is too complex (78 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 204,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (79 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 204,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (178 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 222,
+      "col": 13,
+      "severity": "warning",
+      "ruleId": "PERF401",
+      "message": "Use `list.extend` to create a transformed list",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 317,
+      "col": 13,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `L` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 358,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `L` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 372,
+      "col": 25,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 385,
+      "col": 29,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 386,
+      "col": 46,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 412,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `MAX_LEADING` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 413,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `MAX_TRAILING` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 435,
+      "col": 44,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 474,
+      "col": 88,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `0.5` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\occupazione.py",
+      "line": 110,
+      "col": 55,
+      "severity": "warning",
+      "ruleId": "RUF002",
+      "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\occupazione.py",
+      "line": 118,
+      "col": 17,
+      "severity": "warning",
+      "ruleId": "PLW2901",
+      "message": "`for` loop variable `row` overwritten by assignment target",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 69,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "SIM110",
+      "message": "Use `return any(f.data_inizio <= data <= f.data_fine for f in festivita)` instead of `for` loop",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 161,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 195,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "SIM110",
+      "message": "Use `return all(griglia[data][i] is None for i in range(start, start + blocco))` instead of `for` loop",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 216,
+      "col": 48,
+      "severity": "warning",
+      "ruleId": "RUF002",
+      "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 3,
+      "col": 53,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 28,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 99,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 102,
+      "col": 26,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `30` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 153,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`_piazza_blocchi_settimanali` is too complex (28 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 153,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (27 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 153,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (64 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 162,
+      "col": 23,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 218,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 254,
+      "col": 30,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `3` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 322,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `3` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 381,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `3` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 477,
+      "col": 23,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 478,
+      "col": 23,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 53,
+      "col": 57,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 59,
+      "col": 56,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 64,
+      "col": 56,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 72,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`esegui_generazione_compatta` is too complex (15 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 77,
+      "col": 13,
+      "severity": "warning",
+      "ruleId": "PERF401",
+      "message": "Use `list.extend` to create a transformed list",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 81,
+      "col": 71,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 85,
+      "col": 77,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `10` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 113,
+      "col": 35,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 119,
+      "col": 38,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 120,
+      "col": 38,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 126,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`final_cleanup_safe` is too complex (18 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 126,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (18 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 131,
+      "col": 86,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 136,
+      "col": 32,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 146,
+      "col": 47,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 156,
+      "col": 45,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 165,
+      "col": 27,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 172,
+      "col": 35,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 207,
+      "col": 52,
+      "severity": "warning",
+      "ruleId": "E701",
+      "message": "Multiple statements on one line (colon)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 17,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`apply_ordinary_pulp` is too complex (68 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 17,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (70 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 17,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (152 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 36,
+      "col": 13,
+      "severity": "warning",
+      "ruleId": "PERF401",
+      "message": "Use `list.extend` to create a transformed list",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 54,
+      "col": 24,
+      "severity": "error",
+      "ruleId": "F821",
+      "message": "Undefined name `slot_e_fisso`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 62,
+      "col": 49,
+      "severity": "error",
+      "ruleId": "F821",
+      "message": "Undefined name `giornata_bloccata`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 122,
+      "col": 13,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `L` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 159,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `L` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 166,
+      "col": 9,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `L` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 179,
+      "col": 28,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 180,
+      "col": 45,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 194,
+      "col": 32,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 195,
+      "col": 49,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 283,
+      "col": 84,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `0.5` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 296,
+      "col": 24,
+      "severity": "error",
+      "ruleId": "F821",
+      "message": "Undefined name `docente_disponibile_global`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 16,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "SIM108",
+      "message": "Use ternary operator `data = data_g if isinstance(data_g, date) else datetime.strptime(data_g, \"%Y-%m-%d\").date()` instead of `if`-`else`-block",
+      "fixability": "auto"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 154,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 320,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `MAX_PASSATE` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 332,
+      "col": 24,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `ore_keys` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 332,
+      "col": 34,
+      "severity": "warning",
+      "ruleId": "RUF059",
+      "message": "Unpacked variable `is_dict` is never used",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 1,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "N999",
+      "message": "Invalid module name: 'provaO'",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 46,
+      "col": 19,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 54,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 75,
+      "col": 28,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 82,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 89,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 158,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`distribuisci_fabbisogno` is too complex (17 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 158,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (16 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 280,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`garantisci_quattro_ore_consecutive` is too complex (14 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 307,
+      "col": 36,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 366,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`compattazione_aggressiva` is too complex (29 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 366,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (27 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 366,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (69 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 386,
+      "col": 74,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `griglia`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 386,
+      "col": 82,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `data`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 391,
+      "col": 44,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `griglia`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 391,
+      "col": 53,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `data`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 391,
+      "col": 76,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `g`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 447,
+      "col": 32,
+      "severity": "error",
+      "ruleId": "FURB171",
+      "message": "Membership test against single-item container",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 519,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`riequilibra_giornate` is too complex (28 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 519,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (26 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 519,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (67 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 536,
+      "col": 63,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `5` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 537,
+      "col": 63,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 553,
+      "col": 78,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `griglia`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 553,
+      "col": 86,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `data_vuota`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 557,
+      "col": 48,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `griglia`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 557,
+      "col": 57,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `data_vuota`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 557,
+      "col": 86,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `g_vuota`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 585,
+      "col": 28,
+      "severity": "error",
+      "ruleId": "FURB171",
+      "message": "Membership test against single-item container",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 657,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`backfill_buchi` is too complex (29 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 657,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (27 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 657,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0915",
+      "message": "Too many statements (67 > 60)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 677,
+      "col": 74,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `griglia`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 677,
+      "col": 82,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `data`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 681,
+      "col": 44,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `griglia`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 681,
+      "col": 53,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `data`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 681,
+      "col": 76,
+      "severity": "warning",
+      "ruleId": "B023",
+      "message": "Function definition does not bind loop variable `g`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 732,
+      "col": 32,
+      "severity": "error",
+      "ruleId": "FURB171",
+      "message": "Membership test against single-item container",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 799,
+      "col": 1,
+      "severity": "warning",
+      "ruleId": "E402",
+      "message": "Module level import not at top of file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 859,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "N806",
+      "message": "Variable `MAX_PASSATE` in function should be lowercase",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 933,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`recupera_debito_residuo` is too complex (14 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\special_days_handler.py",
+      "line": 11,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`apply_special_days` is too complex (18 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\special_days_handler.py",
+      "line": 11,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (17 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\stage_handler.py",
+      "line": 12,
+      "col": 17,
+      "severity": "warning",
+      "ruleId": "RUF002",
+      "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 10,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0911",
+      "message": "Too many return statements (8 > 6)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 56,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "SIM110",
+      "message": "Use `return all(docente_disponibile(docente_id_norm, giorno_it, i) for i in range(ora, ora + blocco))` instead of `for` loop",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 94,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "SIM110",
+      "message": "Use `return any(row[o] is None and o != ora for o in range(prima, ultima + 1))` instead of `for` loop",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 152,
+      "col": 13,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 183,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`ottimizza_settimana_classe` is too complex (13 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 191,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 208,
+      "col": 56,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 209,
+      "col": 52,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `5` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 31,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 38,
+      "col": 27,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 126,
+      "col": 12,
+      "severity": "warning",
+      "ruleId": "PLW0603",
+      "message": "Using the global statement to update `CLASSI_INFO_CACHE` is discouraged",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 126,
+      "col": 31,
+      "severity": "warning",
+      "ruleId": "PLW0603",
+      "message": "Using the global statement to update `CALENDARIO_CACHE` is discouraged",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 144,
+      "col": 12,
+      "severity": "warning",
+      "ruleId": "PLW0603",
+      "message": "Using the global statement to update `CALENDARIO_CACHE` is discouraged",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 144,
+      "col": 30,
+      "severity": "warning",
+      "ruleId": "PLW0603",
+      "message": "Using the global statement to update `CLASSI_INFO_CACHE` is discouraged",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 155,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 159,
+      "col": 20,
+      "severity": "warning",
+      "ruleId": "PERF102",
+      "message": "When using only the values of a dict use the `values()` method",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 171,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "C901",
+      "message": "`valida_motore` is too complex (28 > 12)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 171,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLR0912",
+      "message": "Too many branches (28 > 15)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 187,
+      "col": 5,
+      "severity": "warning",
+      "ruleId": "PLC0415",
+      "message": "`import` should be at the top-level of a file",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 196,
+      "col": 17,
+      "severity": "warning",
+      "ruleId": "SIM118",
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 209,
+      "col": 44,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 212,
+      "col": 18,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 228,
+      "col": 53,
+      "severity": "warning",
+      "ruleId": "RUF003",
+      "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 272,
+      "col": 17,
+      "severity": "warning",
+      "ruleId": "SIM118",
+      "message": "Use `key in dict` instead of `key in dict.keys()`",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 277,
+      "col": 30,
+      "severity": "warning",
+      "ruleId": "PLR2004",
+      "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "config.py",
+      "line": 3,
+      "col": 18,
+      "severity": "warning",
+      "ruleId": "S105",
+      "message": "Possible hardcoded password assigned to: \"SECRET_KEY\"",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\models.py",
+      "line": 19,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'classe_associata' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\models.py",
+      "line": 22,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'materie_assegnate' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\models.py",
+      "line": 40,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'insegnamenti' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\models.py",
+      "line": 79,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-class",
+      "message": "unused class 'Vincolo' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\models.py",
+      "line": 94,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-class",
+      "message": "unused class 'OrarioGenerato' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\anni.py",
+      "line": 19,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'gestione_anno' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\anni.py",
+      "line": 116,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'reset_anno' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\anni.py",
+      "line": 136,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'reset_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 12,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'lista_classi' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 49,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'elimina_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 98,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'crea_materia_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 127,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'elimina_materia_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\classi.py",
+      "line": 142,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'salva_modifiche_materie' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\docenti.py",
+      "line": 8,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'lista_docenti' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\docenti.py",
+      "line": 14,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'crea_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\docenti.py",
+      "line": 29,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'modifica_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\docenti.py",
+      "line": 45,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'elimina_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\festivita.py",
+      "line": 8,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'gestione_festivita' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\festivita.py",
+      "line": 39,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'elimina_festivita' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\home.py",
+      "line": 5,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'home' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\materie.py",
+      "line": 6,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'lista_materie' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\materie.py",
+      "line": 37,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'delete_materia' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 30,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'REPORT_VINCOLI' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 36,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'genera_calendario' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 82,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'lista_versioni' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 96,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'download_calendario' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 105,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'export_xls' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 110,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-attribute",
+      "message": "unused attribute 'title' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 150,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'report_vincoli' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 213,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'delete_stage' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\orario.py",
+      "line": 226,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'diagnostica' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\stage.py",
+      "line": 10,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'gestione_stage' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\stage.py",
+      "line": 17,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'salva_stage' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 21,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'index' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 29,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'vincoli_docenti' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 55,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'delete_vincolo_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 112,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'edit_giorno_speciale' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 140,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'delete_giorno_speciale' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 152,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'disponibilita_annua' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 176,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'delete_disponibilita_annua' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 204,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'salva_giorno_fisso' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\routes\\vincoli.py",
+      "line": 249,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'elimina_giorno_fisso' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\associazioni_loader.py",
+      "line": 6,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'carica_associazioni_parallele' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\associazioni_loader.py",
+      "line": 41,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'genera_doc_est_map' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\diagnostica.py",
+      "line": 55,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'diagnostica_ultimo_calendario' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\duplica_classi_parallele.py",
+      "line": 6,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'duplica_classi_parallele' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 204,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'apply_ordinary_pulp' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 552,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'count_ore_docente_in_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 562,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'crea_buco_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 569,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'registra_occupazione' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\funziona_ordinary040326.py",
+      "line": 569,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'kwargs' (100% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\occupazione.py",
+      "line": 70,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'occupa_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\occupazione.py",
+      "line": 77,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'libera_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 175,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'periodo_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 194,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'slot_libero' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\orario_utils.py",
+      "line": 338,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'sincronizza_classi_associate' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement.py",
+      "line": 405,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'fase5_riempimento_forzato' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 180,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'apply_ordinary' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 206,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'count_ore_docente_in_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 210,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'crea_buco_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 215,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'registra_occupazione' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_placement030326.py",
+      "line": 215,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'kwargs' (100% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\ordinary_pulp.py",
+      "line": 17,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'apply_ordinary_pulp' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 225,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'riequilibra_settimana' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\post_ordinary_optimizer.py",
+      "line": 302,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'ottimizza_post_ordinario' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 64,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'giornata_legale' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 253,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'count_ore_docente_in_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 263,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'crea_buco_docente' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 272,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'count_ore_in_giornata' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 802,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'apply_ordinary' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 1009,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'registra_occupazione' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\provaO.py",
+      "line": 1009,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'kwargs' (100% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 66,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'durata' (100% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\utils_scheduler.py",
+      "line": 183,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'ottimizza_settimana_classe' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "app\\utils\\validator.py",
+      "line": 149,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-function",
+      "message": "unused function 'aggiorna_occupazione_post_sync' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "config.py",
+      "line": 2,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-class",
+      "message": "unused class 'Config' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "config.py",
+      "line": 3,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'SECRET_KEY' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "config.py",
+      "line": 4,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'SQLALCHEMY_DATABASE_URI' (60% confidence)",
+      "fixability": "human"
+    },
+    {
+      "language": "python",
+      "file": "config.py",
+      "line": 5,
+      "col": 0,
+      "severity": "warning",
+      "ruleId": "VUL-unused-variable",
+      "message": "unused variable 'SQLALCHEMY_TRACK_MODIFICATIONS' (60% confidence)",
+      "fixability": "human"
+    }
+  ],
+  "byRule": {
+    "I001": [
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\anni.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 3,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\docenti.py",
+        "line": 2,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\festivita.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\materie.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 3,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\stage.py",
+        "line": 2,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "I001",
+        "message": "Import block is un-sorted or un-formatted",
+        "fixability": "auto"
+      }
+    ],
+    "PTH103": [
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 17,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "PTH103",
+        "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 67,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PTH103",
+        "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 86,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PTH103",
+        "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 17,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "PTH103",
+        "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+        "fixability": "human"
+      }
+    ],
+    "PTH118": [
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 20,
+        "col": 15,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 66,
+        "col": 19,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 71,
+        "col": 16,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 85,
+        "col": 19,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 98,
+        "col": 14,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 20,
+        "col": 15,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 56,
+        "col": 14,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 63,
+        "col": 12,
+        "severity": "warning",
+        "ruleId": "PTH118",
+        "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+        "fixability": "human"
+      }
+    ],
+    "S105": [
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 24,
+        "col": 32,
+        "severity": "warning",
+        "ruleId": "S105",
+        "message": "Possible hardcoded password assigned to: \"SECRET_KEY\"",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 24,
+        "col": 32,
+        "severity": "warning",
+        "ruleId": "S105",
+        "message": "Possible hardcoded password assigned to: \"SECRET_KEY\"",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "config.py",
+        "line": 3,
+        "col": 18,
+        "severity": "warning",
+        "ruleId": "S105",
+        "message": "Possible hardcoded password assigned to: \"SECRET_KEY\"",
+        "fixability": "human"
+      }
+    ],
+    "PLC0415": [
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 34,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 35,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 36,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 37,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 38,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 39,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 40,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 41,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\__init__.py",
+        "line": 42,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 228,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 34,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 35,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 36,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 37,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 38,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 39,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 40,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 41,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\__init__.py",
+        "line": 42,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 181,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 727,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 765,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 152,
+        "col": 13,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 191,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 155,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 187,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLC0415",
+        "message": "`import` should be at the top-level of a file",
+        "fixability": "human"
+      }
+    ],
+    "RUF003": [
+      {
+        "language": "python",
+        "file": "app\\models.py",
+        "line": 17,
+        "col": 35,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 161,
+        "col": 30,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\stage.py",
+        "line": 44,
+        "col": 64,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `–` (EN DASH). Did you mean `-` (HYPHEN-MINUS)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\class_setup.py",
+        "line": 6,
+        "col": 14,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 3,
+        "col": 53,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 218,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 209,
+        "col": 44,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 212,
+        "col": 18,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 228,
+        "col": 53,
+        "severity": "warning",
+        "ruleId": "RUF003",
+        "message": "Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      }
+    ],
+    "PERF102": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 43,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 112,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 148,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 186,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 364,
+        "col": 24,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 739,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 770,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 15,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 202,
+        "col": 24,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 372,
+        "col": 25,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 385,
+        "col": 29,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 435,
+        "col": 44,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 28,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 99,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 162,
+        "col": 23,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 477,
+        "col": 23,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 478,
+        "col": 23,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 179,
+        "col": 28,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 194,
+        "col": 32,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 31,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 38,
+        "col": 27,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 159,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PERF102",
+        "message": "When using only the values of a dict use the `values()` method",
+        "fixability": "human"
+      }
+    ],
+    "PTH208": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 88,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PTH208",
+        "message": "Use `pathlib.Path.iterdir()` instead.",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 57,
+        "col": 20,
+        "severity": "warning",
+        "ruleId": "PTH208",
+        "message": "Use `pathlib.Path.iterdir()` instead.",
+        "fixability": "human"
+      }
+    ],
+    "C901": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 151,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`report_vincoli` is too complex (17 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 29,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`genera_calendario_annuale` is too complex (19 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 68,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`fallback_riempimento_buchi` is too complex (15 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 152,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`fase6_ribilanciamento` is too complex (31 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 343,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`fase7_ribilanciamento_interclassi` is too complex (35 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 576,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`genera_calendario_annuale` is too complex (27 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 649,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`piazzamento_ordinario` is too complex (16 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 11,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`diagnostica_sovrapposizioni` is too complex (13 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\fixed_days_handler.py",
+        "line": 11,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`apply_fixed_days` is too complex (19 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 104,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`_greedy_fallback` is too complex (16 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 204,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`apply_ordinary_pulp` is too complex (78 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 153,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`_piazza_blocchi_settimanali` is too complex (28 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 72,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`esegui_generazione_compatta` is too complex (15 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 126,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`final_cleanup_safe` is too complex (18 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 17,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`apply_ordinary_pulp` is too complex (68 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 158,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`distribuisci_fabbisogno` is too complex (17 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 280,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`garantisci_quattro_ore_consecutive` is too complex (14 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 366,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`compattazione_aggressiva` is too complex (29 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 519,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`riequilibra_giornate` is too complex (28 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 657,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`backfill_buchi` is too complex (29 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 933,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`recupera_debito_residuo` is too complex (14 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\special_days_handler.py",
+        "line": 11,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`apply_special_days` is too complex (18 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 183,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`ottimizza_settimana_classe` is too complex (13 > 12)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 171,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "C901",
+        "message": "`valida_motore` is too complex (28 > 12)",
+        "fixability": "human"
+      }
+    ],
+    "PLR0912": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 151,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (16 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 152,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (27 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 343,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (35 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\fixed_days_handler.py",
+        "line": 11,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (18 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 204,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (79 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 153,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (27 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 126,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (18 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 17,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (70 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 158,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (16 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 366,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (27 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 519,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (26 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 657,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (27 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\special_days_handler.py",
+        "line": 11,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (17 > 15)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 171,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0912",
+        "message": "Too many branches (28 > 15)",
+        "fixability": "human"
+      }
+    ],
+    "E741": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 168,
+        "col": 21,
+        "severity": "warning",
+        "ruleId": "E741",
+        "message": "Ambiguous variable name: `l`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 176,
+        "col": 21,
+        "severity": "warning",
+        "ruleId": "E741",
+        "message": "Ambiguous variable name: `l`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 184,
+        "col": 39,
+        "severity": "warning",
+        "ruleId": "E741",
+        "message": "Ambiguous variable name: `l`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 190,
+        "col": 22,
+        "severity": "warning",
+        "ruleId": "E741",
+        "message": "Ambiguous variable name: `l`",
+        "fixability": "human"
+      }
+    ],
+    "PERF401": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 170,
+        "col": 25,
+        "severity": "warning",
+        "ruleId": "PERF401",
+        "message": "Use `list.extend` to create a transformed list",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 178,
+        "col": 25,
+        "severity": "warning",
+        "ruleId": "PERF401",
+        "message": "Use `list.extend` to create a transformed list",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 91,
+        "col": 21,
+        "severity": "warning",
+        "ruleId": "PERF401",
+        "message": "Use `list.extend` to create a transformed list",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 222,
+        "col": 13,
+        "severity": "warning",
+        "ruleId": "PERF401",
+        "message": "Use `list.extend` to create a transformed list",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 77,
+        "col": 13,
+        "severity": "warning",
+        "ruleId": "PERF401",
+        "message": "Use `list.extend` to create a transformed list",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 36,
+        "col": 13,
+        "severity": "warning",
+        "ruleId": "PERF401",
+        "message": "Use `list.extend` to create a transformed list",
+        "fixability": "human"
+      }
+    ],
+    "PLR0915": [
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 29,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (63 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 152,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (84 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 343,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (80 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 576,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (93 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 204,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (178 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 153,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (64 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 17,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (152 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 366,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (69 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 519,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (67 > 60)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 657,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0915",
+        "message": "Too many statements (67 > 60)",
+        "fixability": "human"
+      }
+    ],
+    "RUF059": [
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 36,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `classi` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 38,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `docenti_dict` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 39,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `nomi_non_prof` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 583,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `classi` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 585,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `docenti_dict` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 586,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `nomi_non_prof` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 332,
+        "col": 24,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `ore_keys` is never used",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 332,
+        "col": 34,
+        "severity": "warning",
+        "ruleId": "RUF059",
+        "message": "Unpacked variable `is_dict` is never used",
+        "fixability": "human"
+      }
+    ],
+    "PLR2004": [
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generato070326r.py",
+        "line": 114,
+        "col": 101,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 386,
+        "col": 46,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 474,
+        "col": 88,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `0.5` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 102,
+        "col": 26,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `30` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 254,
+        "col": 30,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `3` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 322,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `3` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 381,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `3` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 85,
+        "col": 77,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `10` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 180,
+        "col": 45,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 195,
+        "col": 49,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 283,
+        "col": 84,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `0.5` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 154,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 46,
+        "col": 19,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 54,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 75,
+        "col": 28,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 82,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 307,
+        "col": 36,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 536,
+        "col": 63,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `5` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 537,
+        "col": 63,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 208,
+        "col": 56,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `4` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 209,
+        "col": 52,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `5` with a constant variable",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 277,
+        "col": 30,
+        "severity": "warning",
+        "ruleId": "PLR2004",
+        "message": "Magic value used in comparison, consider replacing `2` with a constant variable",
+        "fixability": "human"
+      }
+    ],
+    "E402": [
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 16,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 17,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 22,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\calendario_generator.py",
+        "line": 23,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 161,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 89,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 799,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "E402",
+        "message": "Module level import not at top of file",
+        "fixability": "human"
+      }
+    ],
+    "F821": [
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 87,
+        "col": 45,
+        "severity": "error",
+        "ruleId": "F821",
+        "message": "Undefined name `giorno_label_prev`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 54,
+        "col": 24,
+        "severity": "error",
+        "ruleId": "F821",
+        "message": "Undefined name `slot_e_fisso`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 62,
+        "col": 49,
+        "severity": "error",
+        "ruleId": "F821",
+        "message": "Undefined name `giornata_bloccata`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 296,
+        "col": 24,
+        "severity": "error",
+        "ruleId": "F821",
+        "message": "Undefined name `docente_disponibile_global`",
+        "fixability": "human"
+      }
+    ],
+    "RUF002": [
+      {
+        "language": "python",
+        "file": "app\\utils\\duplica_classi_parallele.py",
+        "line": 10,
+        "col": 30,
+        "severity": "warning",
+        "ruleId": "RUF002",
+        "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\occupazione.py",
+        "line": 110,
+        "col": 55,
+        "severity": "warning",
+        "ruleId": "RUF002",
+        "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 216,
+        "col": 48,
+        "severity": "warning",
+        "ruleId": "RUF002",
+        "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\stage_handler.py",
+        "line": 12,
+        "col": 17,
+        "severity": "warning",
+        "ruleId": "RUF002",
+        "message": "Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?",
+        "fixability": "human"
+      }
+    ],
+    "SIM110": [
+      {
+        "language": "python",
+        "file": "app\\utils\\festivita_handler.py",
+        "line": 10,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "SIM110",
+        "message": "Use `return any(f.data_inizio <= data <= f.data_fine for f in festivita)` instead of `for` loop",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 69,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "SIM110",
+        "message": "Use `return any(f.data_inizio <= data <= f.data_fine for f in festivita)` instead of `for` loop",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 195,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "SIM110",
+        "message": "Use `return all(griglia[data][i] is None for i in range(start, start + blocco))` instead of `for` loop",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 56,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "SIM110",
+        "message": "Use `return all(docente_disponibile(docente_id_norm, giorno_it, i) for i in range(ora, ora + blocco))` instead of `for` loop",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 94,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "SIM110",
+        "message": "Use `return any(row[o] is None and o != ora for o in range(prima, ultima + 1))` instead of `for` loop",
+        "fixability": "human"
+      }
+    ],
+    "N806": [
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 317,
+        "col": 13,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `L` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 358,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `L` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 412,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `MAX_LEADING` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 413,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `MAX_TRAILING` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 122,
+        "col": 13,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `L` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 159,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `L` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 166,
+        "col": 9,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `L` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 320,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `MAX_PASSATE` in function should be lowercase",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 859,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "N806",
+        "message": "Variable `MAX_PASSATE` in function should be lowercase",
+        "fixability": "human"
+      }
+    ],
+    "PLW2901": [
+      {
+        "language": "python",
+        "file": "app\\utils\\occupazione.py",
+        "line": 118,
+        "col": 17,
+        "severity": "warning",
+        "ruleId": "PLW2901",
+        "message": "`for` loop variable `row` overwritten by assignment target",
+        "fixability": "human"
+      }
+    ],
+    "E701": [
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 53,
+        "col": 57,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 59,
+        "col": 56,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 64,
+        "col": 56,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 81,
+        "col": 71,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 113,
+        "col": 35,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 119,
+        "col": 38,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 120,
+        "col": 38,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 131,
+        "col": 86,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 136,
+        "col": 32,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 146,
+        "col": 47,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 156,
+        "col": 45,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 165,
+        "col": 27,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 172,
+        "col": 35,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 207,
+        "col": 52,
+        "severity": "warning",
+        "ruleId": "E701",
+        "message": "Multiple statements on one line (colon)",
+        "fixability": "human"
+      }
+    ],
+    "SIM108": [
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 16,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "SIM108",
+        "message": "Use ternary operator `data = data_g if isinstance(data_g, date) else datetime.strptime(data_g, \"%Y-%m-%d\").date()` instead of `if`-`else`-block",
+        "fixability": "auto"
+      }
+    ],
+    "N999": [
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 1,
+        "col": 1,
+        "severity": "warning",
+        "ruleId": "N999",
+        "message": "Invalid module name: 'provaO'",
+        "fixability": "human"
+      }
+    ],
+    "B023": [
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 386,
+        "col": 74,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `griglia`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 386,
+        "col": 82,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `data`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 391,
+        "col": 44,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `griglia`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 391,
+        "col": 53,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `data`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 391,
+        "col": 76,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `g`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 553,
+        "col": 78,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `griglia`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 553,
+        "col": 86,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `data_vuota`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 557,
+        "col": 48,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `griglia`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 557,
+        "col": 57,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `data_vuota`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 557,
+        "col": 86,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `g_vuota`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 677,
+        "col": 74,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `griglia`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 677,
+        "col": 82,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `data`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 681,
+        "col": 44,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `griglia`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 681,
+        "col": 53,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `data`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 681,
+        "col": 76,
+        "severity": "warning",
+        "ruleId": "B023",
+        "message": "Function definition does not bind loop variable `g`",
+        "fixability": "human"
+      }
+    ],
+    "FURB171": [
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 447,
+        "col": 32,
+        "severity": "error",
+        "ruleId": "FURB171",
+        "message": "Membership test against single-item container",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 585,
+        "col": 28,
+        "severity": "error",
+        "ruleId": "FURB171",
+        "message": "Membership test against single-item container",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 732,
+        "col": 32,
+        "severity": "error",
+        "ruleId": "FURB171",
+        "message": "Membership test against single-item container",
+        "fixability": "human"
+      }
+    ],
+    "PLR0911": [
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 10,
+        "col": 5,
+        "severity": "warning",
+        "ruleId": "PLR0911",
+        "message": "Too many return statements (8 > 6)",
+        "fixability": "human"
+      }
+    ],
+    "PLW0603": [
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 126,
+        "col": 12,
+        "severity": "warning",
+        "ruleId": "PLW0603",
+        "message": "Using the global statement to update `CLASSI_INFO_CACHE` is discouraged",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 126,
+        "col": 31,
+        "severity": "warning",
+        "ruleId": "PLW0603",
+        "message": "Using the global statement to update `CALENDARIO_CACHE` is discouraged",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 144,
+        "col": 12,
+        "severity": "warning",
+        "ruleId": "PLW0603",
+        "message": "Using the global statement to update `CALENDARIO_CACHE` is discouraged",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 144,
+        "col": 30,
+        "severity": "warning",
+        "ruleId": "PLW0603",
+        "message": "Using the global statement to update `CLASSI_INFO_CACHE` is discouraged",
+        "fixability": "human"
+      }
+    ],
+    "SIM118": [
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 196,
+        "col": 17,
+        "severity": "warning",
+        "ruleId": "SIM118",
+        "message": "Use `key in dict` instead of `key in dict.keys()`",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 272,
+        "col": 17,
+        "severity": "warning",
+        "ruleId": "SIM118",
+        "message": "Use `key in dict` instead of `key in dict.keys()`",
+        "fixability": "human"
+      }
+    ],
+    "VUL-unused-variable": [
+      {
+        "language": "python",
+        "file": "app\\models.py",
+        "line": 19,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'classe_associata' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\models.py",
+        "line": 22,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'materie_assegnate' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\models.py",
+        "line": 40,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'insegnamenti' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 30,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'REPORT_VINCOLI' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 569,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'kwargs' (100% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 215,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'kwargs' (100% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 1009,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'kwargs' (100% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 66,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'durata' (100% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "config.py",
+        "line": 3,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'SECRET_KEY' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "config.py",
+        "line": 4,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'SQLALCHEMY_DATABASE_URI' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "config.py",
+        "line": 5,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-variable",
+        "message": "unused variable 'SQLALCHEMY_TRACK_MODIFICATIONS' (60% confidence)",
+        "fixability": "human"
+      }
+    ],
+    "VUL-unused-class": [
+      {
+        "language": "python",
+        "file": "app\\models.py",
+        "line": 79,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-class",
+        "message": "unused class 'Vincolo' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\models.py",
+        "line": 94,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-class",
+        "message": "unused class 'OrarioGenerato' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "config.py",
+        "line": 2,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-class",
+        "message": "unused class 'Config' (60% confidence)",
+        "fixability": "human"
+      }
+    ],
+    "VUL-unused-function": [
+      {
+        "language": "python",
+        "file": "app\\routes\\anni.py",
+        "line": 19,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'gestione_anno' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\anni.py",
+        "line": 116,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'reset_anno' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\anni.py",
+        "line": 136,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'reset_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 12,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'lista_classi' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 49,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'elimina_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 98,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'crea_materia_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 127,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'elimina_materia_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\classi.py",
+        "line": 142,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'salva_modifiche_materie' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\docenti.py",
+        "line": 8,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'lista_docenti' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\docenti.py",
+        "line": 14,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'crea_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\docenti.py",
+        "line": 29,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'modifica_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\docenti.py",
+        "line": 45,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'elimina_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\festivita.py",
+        "line": 8,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'gestione_festivita' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\festivita.py",
+        "line": 39,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'elimina_festivita' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\home.py",
+        "line": 5,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'home' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\materie.py",
+        "line": 6,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'lista_materie' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\materie.py",
+        "line": 37,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'delete_materia' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 36,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'genera_calendario' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 82,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'lista_versioni' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 96,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'download_calendario' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 105,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'export_xls' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 150,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'report_vincoli' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 213,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'delete_stage' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 226,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'diagnostica' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\stage.py",
+        "line": 10,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'gestione_stage' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\stage.py",
+        "line": 17,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'salva_stage' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 21,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'index' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 29,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'vincoli_docenti' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 55,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'delete_vincolo_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 112,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'edit_giorno_speciale' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 140,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'delete_giorno_speciale' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 152,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'disponibilita_annua' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 176,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'delete_disponibilita_annua' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 204,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'salva_giorno_fisso' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\routes\\vincoli.py",
+        "line": 249,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'elimina_giorno_fisso' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\associazioni_loader.py",
+        "line": 6,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'carica_associazioni_parallele' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\associazioni_loader.py",
+        "line": 41,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'genera_doc_est_map' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\diagnostica.py",
+        "line": 55,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'diagnostica_ultimo_calendario' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\duplica_classi_parallele.py",
+        "line": 6,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'duplica_classi_parallele' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 204,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'apply_ordinary_pulp' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 552,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'count_ore_docente_in_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 562,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'crea_buco_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\funziona_ordinary040326.py",
+        "line": 569,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'registra_occupazione' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\occupazione.py",
+        "line": 70,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'occupa_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\occupazione.py",
+        "line": 77,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'libera_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 175,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'periodo_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 194,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'slot_libero' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\orario_utils.py",
+        "line": 338,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'sincronizza_classi_associate' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement.py",
+        "line": 405,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'fase5_riempimento_forzato' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 180,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'apply_ordinary' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 206,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'count_ore_docente_in_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 210,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'crea_buco_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_placement030326.py",
+        "line": 215,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'registra_occupazione' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\ordinary_pulp.py",
+        "line": 17,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'apply_ordinary_pulp' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 225,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'riequilibra_settimana' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\post_ordinary_optimizer.py",
+        "line": 302,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'ottimizza_post_ordinario' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 64,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'giornata_legale' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 253,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'count_ore_docente_in_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 263,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'crea_buco_docente' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 272,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'count_ore_in_giornata' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 802,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'apply_ordinary' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\provaO.py",
+        "line": 1009,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'registra_occupazione' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\utils_scheduler.py",
+        "line": 183,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'ottimizza_settimana_classe' (60% confidence)",
+        "fixability": "human"
+      },
+      {
+        "language": "python",
+        "file": "app\\utils\\validator.py",
+        "line": 149,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-function",
+        "message": "unused function 'aggiorna_occupazione_post_sync' (60% confidence)",
+        "fixability": "human"
+      }
+    ],
+    "VUL-unused-attribute": [
+      {
+        "language": "python",
+        "file": "app\\routes\\orario.py",
+        "line": 110,
+        "col": 0,
+        "severity": "warning",
+        "ruleId": "VUL-unused-attribute",
+        "message": "unused attribute 'title' (60% confidence)",
+        "fixability": "human"
+      }
+    ]
+  }
+}

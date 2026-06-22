@@ -1,7 +1,17 @@
 from datetime import datetime
 
-from app.models import Classe, DisponibilitaAnnua, Docente, GiornoFisso, GiornoSpeciale, Materia, VincoloDocente, db
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+
+from app.models import (
+    Classe,
+    DisponibilitaAnnua,
+    Docente,
+    GiornoFisso,
+    GiornoSpeciale,
+    Materia,
+    VincoloDocente,
+    db,
+)
 
 MAPPA_GIORNI_COMPLETI = {
     "lun": "Lunedì",

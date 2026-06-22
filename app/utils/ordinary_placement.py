@@ -147,10 +147,7 @@ def _slot_intoccabile(cd, data_g, h):
         return True
 
     # slot speciale
-    if (data_g, h) in cd.get("speciali_per_giorno", set()):
-        return True
-
-    return False
+    return (data_g, h) in cd.get("speciali_per_giorno", set())
 
 
 def _piazza_blocchi_settimanali(cd, docente_ok_wrapper, mid, info, settimana):

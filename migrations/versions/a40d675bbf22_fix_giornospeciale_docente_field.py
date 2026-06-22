@@ -5,8 +5,8 @@ Revises: 34252539bada
 Create Date: 2026-01-13 21:00:00
 """
 
-from alembic import op
 import sqlalchemy as sa
+from alembic import op
 
 revision = 'a40d675bbf22'
 down_revision = '34252539bada'

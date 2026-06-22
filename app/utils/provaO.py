@@ -26,10 +26,7 @@ def slot_assegnabile(griglia, classe_id, docente_id, data, ora, docente_ok, gior
         return False
 
     # Vincoli docente
-    if docente_id and not docente_ok(docente_id, data, giorno_it, ora, 1):
-        return False
-
-    return True
+    return not (docente_id and not docente_ok(docente_id, data, giorno_it, ora, 1))
 
 def giornata_valida(griglia, data, ore_giornaliere, g=None):
     """

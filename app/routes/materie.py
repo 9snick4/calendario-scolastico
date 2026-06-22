@@ -1,5 +1,6 @@
-from app.models import Materia, db
 from flask import Blueprint, flash, redirect, render_template, request, url_for
+
+from app.models import Materia, db
 
 materie_bp = Blueprint("materie", __name__, url_prefix="/materie")
 

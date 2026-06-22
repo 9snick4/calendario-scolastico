@@ -154,10 +154,11 @@ def compatta_giornata(griglia, data):
         except Exception:
             giorno_it = None
 
-        if docente_id and giorno_it:
-            if not docente_ok_wrapper(docente_id, data, giorno_it, target, 1):
-                target += 1
-                continue
+        if docente_id and giorno_it and not docente_ok_wrapper(
+            docente_id, data, giorno_it, target, 1
+        ):
+            target += 1
+            continue
 
         # NON creare buchi
         if crea_buco_in_giornata(griglia, data, target, 1):
@@ -228,9 +229,10 @@ def ottimizza_settimana_classe(griglie, settimane_classe, classe):
                             continue
 
                         # docente libero nel giorno povero?
-                        if docente_id:
-                            if ora_p in occ.OCCUPAZIONE_DOCENTI_GLOBALE.get(docente_id, {}).get(data_p, {}):
-                                continue
+                        if docente_id and ora_p in (
+                            occ.OCCUPAZIONE_DOCENTI_GLOBALE.get(docente_id, {}).get(data_p, {})
+                        ):
+                            continue
 
                         # prova lo spostamento
                         lez_p[ora_p] = slot
