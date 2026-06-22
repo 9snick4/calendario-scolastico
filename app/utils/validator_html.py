@@ -1,5 +1,6 @@
 from markupsafe import escape
 
+
 def render_html_report(conflitti_reali, conflitti_finali):
     """
     Genera un report HTML leggibile e colorato.

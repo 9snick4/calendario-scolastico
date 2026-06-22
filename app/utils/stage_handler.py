@@ -1,8 +1,7 @@
 # app/utils/stage_handler.py
 
-from app.utils.orario_utils import giorno_festivo, classe_in_stage_giorno
 import app.utils.occupazione as occ
-
+from app.utils.orario_utils import classe_in_stage_giorno, giorno_festivo
 
 
 def apply_stage(griglia, giorni_settimana, classe):

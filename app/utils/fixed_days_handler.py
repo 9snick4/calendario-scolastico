@@ -1,8 +1,8 @@
 # app/utils/fixed_days_handler.py
 
-from app.utils.orario_utils import piazza_blocco, normalizza_giorno_it
-from app.models import Docente
 import app.utils.occupazione as occ
+from app.models import Docente
+from app.utils.orario_utils import normalizza_giorno_it, piazza_blocco
 from app.utils.utils_scheduler import docente_ok_wrapper  # ✔ usiamo il wrapper unico
 
 print(">>> FIXED DAYS HANDLER CARICATO")

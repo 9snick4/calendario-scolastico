@@ -24,13 +24,13 @@
 # • FISSO            → blocca SOLO SE STESSO; gli slot liberi della stessa
 #                      giornata sono disponibili per entrambe le fasi.
 
-from datetime import date
 from collections import defaultdict
+from datetime import date
 
 import pulp
 
-from app.utils.orario_utils import piazza_blocco
 import app.utils.occupazione as occ
+from app.utils.orario_utils import piazza_blocco
 
 # ──────────────────────────────────────────────────────────────
 # CONFIGURAZIONE
@@ -363,13 +363,13 @@ def apply_ordinary_pulp(
     # 5.5) Max MAX_ORE_DOCENTE_PER_GIORNO per docente per giornata
     for data_g in giorni_ordinari:
         doc_vars = defaultdict(list)
-        for (mid, d, h), var in x.items():
+        for (mid, d, _), var in x.items():
             if d != data_g:
                 continue
             did = materia_docente.get(mid)
             if did:
                 doc_vars[did].append(var)
-        for did, vlist in doc_vars.items():
+        for _, vlist in doc_vars.items():
             prob += pulp.lpSum(vlist) <= MAX_ORE_DOCENTE_PER_GIORNO
 
     # 5.6) Max 2 ore consecutive per docente (finestra di 3)
@@ -382,7 +382,7 @@ def apply_ordinary_pulp(
                 did = materia_docente.get(mid)
                 if did:
                     doc_vars[did].append(var)
-            for did, vlist in doc_vars.items():
+            for _, vlist in doc_vars.items():
                 prob += pulp.lpSum(vlist) <= 2
 
     # 5.7) RIMOSSO — minimo ore assoluto per giornata
@@ -432,7 +432,7 @@ def apply_ordinary_pulp(
             prob += pm[data_g] >= v
         prob += pm[data_g] <= pulp.lpSum(pm_vars)
     if pom_slots:
-        for (anno, mese), giorni_mese in _giorni_per_mese(all_days).items():
+        for (_anno, _mese), giorni_mese in _giorni_per_mese(all_days).items():
             pm_mese = [pm[d] for d in giorni_mese if d in pm]
             if pm_mese:
                 prob += pulp.lpSum(pm_mese) <= MAX_POMERIGGI_AL_MESE

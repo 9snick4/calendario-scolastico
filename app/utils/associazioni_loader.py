@@ -2,6 +2,7 @@
 
 from app.models import Classe
 
+
 def carica_associazioni_parallele():
     """
     Usa classe_associata_id come riferimento alla classe PRINCIPALE.

@@ -1,31 +1,28 @@
 # app/utils/calendario_generator.py
 
-from .class_setup import prepara_classi
-from .stage_handler import apply_stage
 from app.utils.festivita_handler import apply_festivita
-from .special_days_handler import apply_special_days
+
+from .class_setup import prepara_classi
 from .fixed_days_handler import apply_fixed_days
+from .special_days_handler import apply_special_days
+from .stage_handler import apply_stage
+
 # ============================================================
 # COSTANTI ANTI-LOOP
 # ============================================================
 MAX_ITER = 5
 
 
+import app.utils.occupazione as occ
 from app.utils.orario_utils import (
-    crea_griglia_settimanale,
     costruisci_settimana,
+    crea_griglia_settimanale,
     salva_calendari,
-    sincronizza_classi_associate,
 )
-
+from app.utils.ordinary_placement import ordinary_placement, prepara_classi_data
 from app.utils.utils_scheduler import (
     docente_ok_wrapper,
 )
-
-from app.utils.ordinary_placement import ordinary_placement
-from app.utils.ordinary_placement import prepara_classi_data
-
-import app.utils.occupazione as occ
 
 print(">>> VERSIONE PATCHATA DEFINITIVA")
 
@@ -370,7 +367,7 @@ def fase7_ribilanciamento_interclassi(classi_data, docente_ok_wrapper):
     # Mappa docente → classi in cui insegna
     doc_to_classi = {}
     for cd in classi_data:
-        for mid, info in cd["materie_attive"].items():
+        for _, info in cd["materie_attive"].items():
             docente_id = info.get("docente_id")
             if docente_id:
                 doc_to_classi.setdefault(docente_id, set()).add(cd["classe"].id)
@@ -438,14 +435,13 @@ def fase7_ribilanciamento_interclassi(classi_data, docente_ok_wrapper):
                         # tenta di spostare un'ora da una classe senza debito
                         spostato = False
 
-                        for cd_sorgente, mid_sorg, info_sorg in materie_senza_debito:
+                        for cd_sorgente, mid_sorg, _info_sorg in materie_senza_debito:
                             if spostato:
                                 break
 
                             griglie_sorg = cd_sorgente["griglie"]
                             giorni_sorg = cd_sorgente["giorni_per_key"]
                             ore_g_sorg = cd_sorgente["ore_g"]
-                            classe_id_sorg = cd_sorgente["classe"].id
 
                             for key2, giorni2 in giorni_sorg.items():
                                 if spostato:
@@ -746,7 +742,7 @@ def genera_calendario_annuale():
 
     piazzamento_ordinario(classi_info, docente_ok_wrapper)
 
-    for cid, info in classi_info.items():
+    for _, info in classi_info.items():
         classe = info["classe"]
         settimane_classe = info["settimane_classe"]
         ore_giornaliere = info["ore_giornaliere"]
@@ -772,29 +768,12 @@ def genera_calendario_annuale():
 
     calendario_per_classe = salva_calendari(classi_info)
 
-    from app.utils.associazioni_loader import (
-        carica_associazioni_parallele,
-        genera_doc_est_map,
-    )
-
-    associazioni = carica_associazioni_parallele()
-    doc_est_map = genera_doc_est_map(associazioni)
-
-    from app.utils.duplica_classi_parallele import duplica_classi_parallele
-
-    # if associazioni:
-    #     calendario_per_classe = duplica_classi_parallele(
-    #         calendario_per_classe,
-    #         associazioni,
-    #         doc_est_map
-    #     )
-
     from app.utils.validator import set_validator_cache, valida_motore
 
     set_validator_cache(calendario_per_classe, classi_info)
 
     errori = []
-    for cid, info in classi_info.items():
+    for _, info in classi_info.items():
         griglie_classe = info.get("griglie")
         settimane_classe = info["settimane_classe"]
         ore_giornaliere = info["ore_giornaliere"]

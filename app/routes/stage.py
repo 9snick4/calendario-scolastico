@@ -1,7 +1,8 @@
 # app/routes/stage.py
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.models import db, Classe, Stage
 from datetime import datetime
+
+from app.models import Classe, Stage, db
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 stage_bp = Blueprint("stage", __name__, url_prefix="/stage")
 

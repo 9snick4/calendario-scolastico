@@ -1,6 +1,6 @@
 # app/routes/docenti.py
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.models import db, Docente
+from app.models import Docente, db
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 docenti_bp = Blueprint("docenti", __name__, url_prefix="/docenti")
 

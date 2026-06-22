@@ -1,9 +1,10 @@
-from datetime import date
 from collections import defaultdict
+from datetime import date
 
 import pulp
-from app.utils.orario_utils import piazza_blocco
+
 import app.utils.occupazione as occ
+from app.utils.orario_utils import piazza_blocco
 
 CUTOFF_MARZO = (3, 1)
 
@@ -130,7 +131,7 @@ def apply_ordinary_pulp(
     for data_g in all_days:
         for h in range(ore_giornaliere):
             vars_slot = [x[(mid, data_g, h)]
-                         for (mid, d, hh) in x.keys()
+                         for (mid, d, hh) in x
                          if d == data_g and hh == h]
             if vars_slot:
                 # y >= somma x
@@ -145,7 +146,7 @@ def apply_ordinary_pulp(
     for data_g in all_days:
         for h in range(ore_giornaliere):
             vars_slot = [x[(mid, data_g, h)]
-                         for (mid, d, hh) in x.keys()
+                         for (mid, d, hh) in x
                          if d == data_g and hh == h]
             if vars_slot:
                 prob += pulp.lpSum(vars_slot) <= (0 if (data_g, h) in fixed_slots else 1)
@@ -156,8 +157,8 @@ def apply_ordinary_pulp(
         if debito <= 0:
             continue
         L = materia_blocco[mid]
-        vars_x = [x[(mid, d, h)] for (m, d, h) in x.keys() if m == mid]
-        vars_z = [z[(mid, d, h)] for (m, d, h) in z.keys() if m == mid]
+        vars_x = [x[(mid, d, h)] for (m, d, h) in x if m == mid]
+        vars_z = [z[(mid, d, h)] for (m, d, h) in z if m == mid]
         prob += pulp.lpSum(vars_x) + L * pulp.lpSum(vars_z) == debito
 
     # 5.4) Collegamento blocchi → ore
@@ -169,13 +170,13 @@ def apply_ordinary_pulp(
     # 5.5) Max 2 ore totali per docente per giornata
     for data_g in all_days:
         doc_to_vars = defaultdict(list)
-        for (mid, d, h), var in x.items():
+        for (mid, d, _), var in x.items():
             if d != data_g:
                 continue
             did = materia_docente.get(mid)
             if did:
                 doc_to_vars[did].append(var)
-        for did, vars_doc in doc_to_vars.items():
+        for _, vars_doc in doc_to_vars.items():
             prob += pulp.lpSum(vars_doc) <= 2
 
     # 5.6) Max 2 ore consecutive per docente
@@ -190,7 +191,7 @@ def apply_ordinary_pulp(
                 did = materia_docente.get(mid)
                 if did:
                     doc_to_vars[did].append(var)
-            for did, vars_doc in doc_to_vars.items():
+            for _, vars_doc in doc_to_vars.items():
                 prob += pulp.lpSum(vars_doc) <= 2
 
     # 5.7) Minimo ore per giornata (su y)

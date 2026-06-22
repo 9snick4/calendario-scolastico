@@ -14,5 +14,5 @@ if __name__ == "__main__":
             print(name, "→", module)
     print("===================================\n")
 
-    
+
     app.run(debug=False, use_reloader=False)

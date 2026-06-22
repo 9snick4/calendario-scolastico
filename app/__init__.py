@@ -1,7 +1,8 @@
 import os
+
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -31,16 +32,15 @@ def create_app():
     migrate.init_app(app, db)
 
     # Importa le route
-    from app.routes.home import home_bp
+    from app.routes.anni import anni_bp
     from app.routes.classi import classi_bp
     from app.routes.docenti import docenti_bp
-    from app.routes.anni import anni_bp
+    from app.routes.festivita import festivita_bp
+    from app.routes.home import home_bp
+    from app.routes.materie import materie_bp
+    from app.routes.orario import orario_bp
     from app.routes.stage import stage_bp
     from app.routes.vincoli import vincoli_bp
-    from app.routes.festivita import festivita_bp
-    from app.routes.materie import materie_bp
-    
-    from app.routes.orario import orario_bp
 
     # Registra blueprint
     app.register_blueprint(home_bp)
@@ -52,8 +52,8 @@ def create_app():
     app.register_blueprint(vincoli_bp)
     app.register_blueprint(festivita_bp)
     app.register_blueprint(orario_bp)
-    
-    
+
+
     # app.register_blueprint(motore_bp)
 
     return app

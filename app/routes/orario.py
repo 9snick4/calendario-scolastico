@@ -1,27 +1,29 @@
 # app/routes/orario.py
 
-from flask import Blueprint, render_template, send_file, redirect, request, url_for, flash, current_app
+import os
 from datetime import datetime
 from io import BytesIO
-import os
+
 import openpyxl
-from flask import send_from_directory
-
 from app.models import (
-    db,
-    Classe,
-    MateriaClasse,
-    Materia,
-    AnnoFormativo,
-    GiornoFisso,
-    VincoloDocente,
-    GiornoSpeciale,
-    Stage,
     Docente,
+    GiornoFisso,
+    Stage,
+    db,
 )
-
-import app.utils.orario_utils as orario_utils
+from app.utils import orario_utils
 from app.utils.calendario_generator import genera_calendario_annuale
+from flask import (
+    Blueprint,
+    current_app,
+    flash,
+    redirect,
+    render_template,
+    request,
+    send_file,
+    send_from_directory,
+    url_for,
+)
 
 orario_bp = Blueprint("orario", __name__, url_prefix="/orario")
 
@@ -38,7 +40,7 @@ def genera_calendario():
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
 
-    for classe_id, dati in calendario.items():
+    for _, dati in calendario.items():
         ws = wb.create_sheet(title=dati["nome_classe"][:31])
 
         ws.cell(row=1, column=1, value="Data")
@@ -107,7 +109,7 @@ def export_xls():
     wb = openpyxl.Workbook()
     wb.active.title = "Indice"
 
-    for classe_id, dati in calendario.items():
+    for _, dati in calendario.items():
         ws = wb.create_sheet(title=dati["nome_classe"][:31])
 
         ws.cell(row=1, column=1, value="Data")
@@ -154,8 +156,6 @@ def report_vincoli():
         nome_classe = dati["nome_classe"]
         calendario_classe = dati["calendario"]
 
-        materie_classe = MateriaClasse.query.filter_by(classe_id=classe_id).all()
-        docente_dict = {d.id: d.nome_docente for d in Docente.query.all()}
         giorni_fissi = GiornoFisso.query.filter_by(classe_id=classe_id).all()
 
         for giorno in calendario_classe:
@@ -225,7 +225,7 @@ def delete_stage(classe_id):
 
 @orario_bp.route("/diagnostica")
 def diagnostica():
-    from app.utils.validator import CLASSI_INFO_CACHE, CALENDARIO_CACHE, stampa_report
+    from app.utils.validator import CALENDARIO_CACHE, CLASSI_INFO_CACHE, stampa_report
 
     calendario = CALENDARIO_CACHE
     classi_info = CLASSI_INFO_CACHE

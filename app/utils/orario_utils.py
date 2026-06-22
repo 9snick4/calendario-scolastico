@@ -1,10 +1,9 @@
 # app/utils/orario_utils.py
 
-from datetime import datetime, date, time, timedelta
-from collections import defaultdict
+from datetime import date, datetime, time, timedelta
 
-from app.models import VincoloDocente, GiornoSpeciale, Stage, Festivita, Docente
 import app.utils.occupazione as occ
+from app.models import Docente, Festivita, GiornoSpeciale, Stage, VincoloDocente
 
 print(">>> CARICATO orario_utils.py VERSIONE NUOVA")
 
@@ -160,7 +159,7 @@ def classe_in_stage_giorno(classe_id, data):
 # ===============================
 
 from sqlalchemy import func
-from app.models import GiornoSpeciale
+
 
 def giorno_speciale_classe(classe_id, data_giorno):
     return GiornoSpeciale.query.filter(
@@ -345,8 +344,6 @@ def sincronizza_classi_associate(calendario_per_classe, classi, nomi_non_prof):
 
     doc_est = Docente.query.filter_by(nome_docente="DOC EST").first()
     nome_doc_est = doc_est.nome_docente if doc_est else "DOC EST"
-
-    classi_map = {c.id: c for c in classi}
 
     for classe in classi:
         if not classe.classe_associata_id:

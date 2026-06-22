@@ -1,10 +1,9 @@
 # app/utils/post_ordinary_optimizer.py
 
-from copy import deepcopy
+from datetime import date, datetime
+
 import app.utils.occupazione as occ
 
-
-from datetime import datetime, date
 
 def minimo_ore_giornata(data_g):
     """

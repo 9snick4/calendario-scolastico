@@ -1,15 +1,7 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.models import (
-    db,
-    Docente,
-    VincoloDocente,
-    Classe,
-    GiornoSpeciale,
-    Materia,
-    DisponibilitaAnnua,
-    GiornoFisso
-)
 from datetime import datetime
+
+from app.models import Classe, DisponibilitaAnnua, Docente, GiornoFisso, GiornoSpeciale, Materia, VincoloDocente, db
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 MAPPA_GIORNI_COMPLETI = {
     "lun": "Lunedì",
@@ -77,7 +69,6 @@ def giorni_speciali():
     classi = Classe.query.order_by(Classe.nome_classe).all()
     materie = Materia.query.order_by(Materia.nome).all()
     docenti = Docente.query.order_by(Docente.nome_docente).all()
-    docenti_dict = {d.id: d.nome_docente for d in docenti}
 
     filtro_classe = request.args.get("classe_id")
 
@@ -200,8 +191,6 @@ def giorni_fissi():
     materie = Materia.query.order_by(Materia.nome).all()
     docenti = Docente.query.order_by(Docente.nome_docente).all()
     giorni_fissi = GiornoFisso.query.all()
-    docenti_dict = {d.id: d.nome_docente for d in docenti}
-
     return render_template(
         "giorni_fissi.html",
         classi=classi,
@@ -226,7 +215,7 @@ def salva_giorno_fisso():
 
     # Normalizza il giorno (lun → Lunedì)
     giorno = giorno.strip().lower()
-    giorno = MAPPA_GIORNI_COMPLETI.get(giorno, None)
+    giorno = MAPPA_GIORNI_COMPLETI.get(giorno)
 
     if giorno is None:
         flash("Giorno non valido", "danger")
@@ -248,7 +237,7 @@ def salva_giorno_fisso():
 
 
 
-    
+
 
     db.session.add(nuovo)
     db.session.commit()

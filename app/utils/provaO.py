@@ -2,9 +2,9 @@
 
 from math import ceil
 
-from app.utils.orario_utils import slot_libero, piazza_blocco
-from app.utils.utils_scheduler import compatta_giornata, crea_buco_in_giornata
 import app.utils.occupazione as occ
+from app.utils.orario_utils import piazza_blocco
+from app.utils.utils_scheduler import compatta_giornata, crea_buco_in_giornata
 
 
 # ------------------------------------------------------------
@@ -90,6 +90,7 @@ def giornata_legale(griglia, data, ore_giornaliere):
     return False
 
 from datetime import date
+
 
 def tutte_giornate_legali(griglie, settimane_classe, classe):
     ore_giornaliere = classe.ore_massime_giornaliere or 6
@@ -278,7 +279,6 @@ def count_ore_in_giornata(griglia, data, ore_giornaliere):
 # ------------------------------------------------------------
 # 5) NUOVA PASSATA: GARANTISCI 4 ORE CONSECUTIVE
 # ------------------------------------------------------------
-from datetime import date
 
 def garantisci_quattro_ore_consecutive(griglie, settimane_classe, classe, materie_info, docente_ok):
 
@@ -801,6 +801,7 @@ def backfill_buchi(griglie, settimane_classe, classe, materie_info, docente_ok):
 # ------------------------------------------------------------
 from app.utils.fixed_days_handler import apply_fixed_days
 
+
 def apply_ordinary(
     griglie,
     settimane_classe,
@@ -820,7 +821,7 @@ def apply_ordinary(
             occ.OCCUPAZIONE_CLASSI_GLOBALE.setdefault(classe.id, {})
             occ.OCCUPAZIONE_CLASSI_GLOBALE[classe.id].setdefault(data, set())
 
-    # 0.5) Inizializza OCCUPAZIONE_DOCENTI_GLOBALE 
+    # 0.5) Inizializza OCCUPAZIONE_DOCENTI_GLOBALE
     inizializza_occupazione_globale_da_locale(occupazione_docenti)
 
     # 1) Giorni fissi
@@ -852,7 +853,7 @@ def apply_ordinary(
         docente_ok
     )
 
-    
+
 
     # 3) Ciclo di ottimizzazione GLOBALE
     #    Fino a 100 passate, ma ci fermiamo prima se:
@@ -908,8 +909,8 @@ def apply_ordinary(
             break
 
 
-        
-    
+
+
     # 4.1) Compattazione finale
     compatta_settimane(griglie, settimane_classe)
 
@@ -930,8 +931,8 @@ def apply_ordinary(
     if classe_ha_finito(materie_info):
         return
 
-    
-    
+
+
 def recupera_debito_residuo(griglie, settimane_classe, classe, materie_info, docente_ok):
 
     changed = False
@@ -1013,7 +1014,6 @@ def registra_occupazione(*args, **kwargs):
     Funzione di compatibilità per vecchi import.
     La logica di occupazione è gestita direttamente nelle funzioni sopra.
     """
-    pass
 
 
 def classe_ha_finito(materie_info):

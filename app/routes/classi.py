@@ -1,7 +1,7 @@
 # app/routes/classi.py
 
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.models import db, Classe, Docente, Materia, MateriaClasse
+from app.models import Classe, Docente, Materia, MateriaClasse, db
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 classi_bp = Blueprint("classi", __name__, url_prefix="/classi")
 
@@ -72,10 +72,10 @@ def materie_classe(classe_id):
         .order_by(db.func.lower(Materia.nome))
         .all()
     )
-    
-    
-    
-    
+
+
+
+
     MateriaClasse.query.filter_by(classe_id=classe_id).all()
 
     # 🔥 Calcolo totale ore annuali già inserite

@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Lint Report — calendario-scolastico</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; margin: 0; color: #222; background: #f7f8fa; }
+  header { background: #1f2937; color: white; padding: 1.2rem 2rem; }
+  header h1 { margin: 0; font-size: 1.4rem; }
+  header .sub { opacity: 0.7; font-size: 0.85rem; margin-top: 0.3rem; }
+  .summary { padding: 1rem 2rem; display: flex; gap: 2rem; flex-wrap: wrap; background: white; border-bottom: 1px solid #e5e7eb; }
+  .stat { font-size: 0.9rem; }
+  .stat strong { display: block; font-size: 1.8rem; }
+  .stat.err strong   { color: #dc2626; }
+  .stat.warn strong  { color: #d97706; }
+  .stat.auto strong  { color: #059669; }
+  .stat.sub strong   { color: #2563eb; }
+  .stat.human strong { color: #6b7280; }
+  table { width: calc(100% - 4rem); margin: 1rem 2rem; border-collapse: collapse; background: white; }
+  th, td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #f1f5f9; font-size: 0.88rem; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-weight: 600; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 0.82rem; }
+  .sev, .fix, .lang { padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+  .sev-error    { background: #fee2e2; color: #991b1b; }
+  .sev-warning  { background: #fef3c7; color: #92400e; }
+  .fix-auto     { background: #d1fae5; color: #065f46; }
+  .fix-subagent { background: #dbeafe; color: #1e40af; }
+  .fix-human    { background: #f3f4f6; color: #4b5563; }
+  .lang-js      { background: #fef9c3; color: #854d0e; }
+  .lang-python  { background: #dbeafe; color: #1e40af; }
+  tr.sev-error { border-left: 3px solid #dc2626; }
+  tr.sev-warning { border-left: 3px solid #d97706; }
+</style></head><body>
+<header>
+  <h1>Lint Report — calendario-scolastico</h1>
+  <div class="sub">C:\Users\nicot\Desktop\backup_mattia\project\devops\calendario-scolastico · 2026-06-22T10:26:50.161Z · Languages: python</div>
+</header>
+<div class="summary">
+  <div class="stat err"><strong>7</strong> errors</div>
+  <div class="stat warn"><strong>246</strong> warnings</div>
+  <div class="stat"><strong>26</strong> files</div>
+  <div class="stat auto"><strong>45</strong> auto-fixable</div>
+  <div class="stat sub"><strong>26</strong> sub-agent</div>
+  <div class="stat human"><strong>182</strong> human</div>
+</div>
+<table>
+  <thead><tr><th>File</th><th>L:C</th><th>Lang</th><th>Sev</th><th>Rule</th><th>Message</th><th>Fix</th></tr></thead>
+  <tbody>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>15:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM105</code></td>
+      <td>Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>16:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH103</code></td>
+      <td>`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>21:15</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>25:32</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>S105</code></td>
+      <td>Possible hardcoded password assigned to: &quot;SECRET_KEY&quot;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>35:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>36:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>37:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>38:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>39:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>40:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>41:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>42:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\__init__.py</code></td>
+      <td>43:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\models.py</code></td>
+      <td>17:35</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>161:30</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\classi.py</code></td>
+      <td>178:17</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E712</code></td>
+      <td>Avoid equality comparisons to `False`; use `not Materia.is_professionale:` for false checks</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>43:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>66:19</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>67:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH103</code></td>
+      <td>`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>71:16</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>85:19</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>86:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH103</code></td>
+      <td>`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>88:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH208</code></td>
+      <td>Use `pathlib.Path.iterdir()` instead.</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>98:14</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>112:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>151:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`report_vincoli` is too complex (17 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>151:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (16 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>168:21</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E741</code></td>
+      <td>Ambiguous variable name: `l`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>170:25</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF401</code></td>
+      <td>Use `list.extend` to create a transformed list</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>176:21</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E741</code></td>
+      <td>Ambiguous variable name: `l`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>178:25</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF401</code></td>
+      <td>Use `list.extend` to create a transformed list</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>184:39</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E741</code></td>
+      <td>Ambiguous variable name: `l`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>190:22</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E741</code></td>
+      <td>Ambiguous variable name: `l`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\orario.py</code></td>
+      <td>228:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\routes\stage.py</code></td>
+      <td>44:64</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `–` (EN DASH). Did you mean `-` (HYPHEN-MINUS)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>15:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM105</code></td>
+      <td>Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>16:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH103</code></td>
+      <td>`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>21:15</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>25:32</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>S105</code></td>
+      <td>Possible hardcoded password assigned to: &quot;SECRET_KEY&quot;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>35:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>36:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>37:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>38:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>39:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>40:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>41:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>42:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\__init__.py</code></td>
+      <td>43:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>29:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`genera_calendario_annuale` is too complex (19 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>29:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (63 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>36:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `classi` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>38:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `docenti_dict` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>39:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `nomi_non_prof` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>114:101</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>148:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>181:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generato070326r.py</code></td>
+      <td>186:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>16:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>17:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>22:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>23:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>40:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM103</code></td>
+      <td>Return the condition `tg in (&quot;STAGE&quot;, &quot;FESTA&quot;, &quot;SPECIALE&quot;)` directly</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>68:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM103</code></td>
+      <td>Return the condition `not (not same_before and not same_after)` directly</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>74:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`fallback_riempimento_buchi` is too complex (15 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>97:21</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF401</code></td>
+      <td>Use `list.extend` to create a transformed list</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>158:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`fase6_ribilanciamento` is too complex (31 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>158:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (27 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>158:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (84 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>349:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`fase7_ribilanciamento_interclassi` is too complex (35 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>349:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (35 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>349:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (80 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>370:24</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>582:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`genera_calendario_annuale` is too complex (27 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>582:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (93 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>589:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `classi` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>591:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `docenti_dict` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>592:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `nomi_non_prof` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>655:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`piazzamento_ordinario` is too complex (16 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>733:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>745:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>771:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\calendario_generator.py</code></td>
+      <td>776:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\class_setup.py</code></td>
+      <td>6:14</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>11:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`diagnostica_sovrapposizioni` is too complex (13 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>15:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>56:14</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>57:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH208</code></td>
+      <td>Use `pathlib.Path.iterdir()` instead.</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>63:12</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PTH118</code></td>
+      <td>`os.path.join()` should be replaced by `Path` with `/` operator</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>87:45</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>F821</code></td>
+      <td>Undefined name `giorno_label_prev`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\diagnostica.py</code></td>
+      <td>202:24</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\duplica_classi_parallele.py</code></td>
+      <td>10:30</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF002</code></td>
+      <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\festivita_handler.py</code></td>
+      <td>10:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM110</code></td>
+      <td>Use `return any(f.data_inizio &lt;= data &lt;= f.data_fine for f in festivita)` instead of `for` loop</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\fixed_days_handler.py</code></td>
+      <td>11:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`apply_fixed_days` is too complex (19 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\fixed_days_handler.py</code></td>
+      <td>11:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (18 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>104:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`_greedy_fallback` is too complex (16 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>204:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`apply_ordinary_pulp` is too complex (78 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>204:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (79 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>204:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (178 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>222:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF401</code></td>
+      <td>Use `list.extend` to create a transformed list</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>317:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `L` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>358:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `L` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>372:25</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>385:29</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>386:46</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>412:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `MAX_LEADING` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>413:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `MAX_TRAILING` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>435:44</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\funziona_ordinary040326.py</code></td>
+      <td>474:88</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `0.5` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\occupazione.py</code></td>
+      <td>110:55</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF002</code></td>
+      <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\occupazione.py</code></td>
+      <td>118:17</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLW2901</code></td>
+      <td>`for` loop variable `row` overwritten by assignment target</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>69:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM110</code></td>
+      <td>Use `return any(f.data_inizio &lt;= data &lt;= f.data_fine for f in festivita)` instead of `for` loop</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>161:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>195:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM110</code></td>
+      <td>Use `return all(griglia[data][i] is None for i in range(start, start + blocco))` instead of `for` loop</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\orario_utils.py</code></td>
+      <td>216:48</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF002</code></td>
+      <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>3:53</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>28:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>99:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>102:26</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `30` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>150:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM103</code></td>
+      <td>Return the condition directly</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>156:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`_piazza_blocchi_settimanali` is too complex (28 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>156:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (27 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>156:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (64 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>165:23</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>221:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `‑` (NON-BREAKING HYPHEN). Did you mean `-` (HYPHEN-MINUS)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>257:30</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `3` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>325:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `3` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>384:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `3` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>480:23</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement.py</code></td>
+      <td>481:23</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>53:57</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>59:56</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>64:56</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>72:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`esegui_generazione_compatta` is too complex (15 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>77:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF401</code></td>
+      <td>Use `list.extend` to create a transformed list</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>81:71</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>85:77</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `10` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>113:35</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>119:38</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>120:38</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>126:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`final_cleanup_safe` is too complex (19 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>126:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (19 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>131:86</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>136:32</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>139:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM102</code></td>
+      <td>Use a single `if` statement instead of nested `if` statements</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>143:51</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>153:45</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>162:27</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>169:35</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_placement030326.py</code></td>
+      <td>204:52</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E701</code></td>
+      <td>Multiple statements on one line (colon)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>17:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`apply_ordinary_pulp` is too complex (68 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>17:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (70 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>17:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (152 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>36:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF401</code></td>
+      <td>Use `list.extend` to create a transformed list</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>54:24</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>F821</code></td>
+      <td>Undefined name `slot_e_fisso`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>62:49</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>F821</code></td>
+      <td>Undefined name `giornata_bloccata`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>122:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `L` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>159:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `L` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>166:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `L` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>179:28</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>180:45</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>194:32</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>195:49</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>283:84</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `0.5` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\ordinary_pulp.py</code></td>
+      <td>296:24</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>F821</code></td>
+      <td>Undefined name `docente_disponibile_global`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>16:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM108</code></td>
+      <td>Use ternary operator `data = data_g if isinstance(data_g, date) else datetime.strptime(data_g, &quot;%Y-%m-%d&quot;).date()` instead of `if`-`else`-block</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>40:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM103</code></td>
+      <td>Return the negated condition directly</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>49:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM103</code></td>
+      <td>Return the condition `docente_disponibile_global(docente_id, data, ora)` directly</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>151:8</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR1714</code></td>
+      <td>Consider merging multiple comparisons: `ore in {0, 2}`.</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>151:27</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>158:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>229:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`riequilibra_settimana` is too complex (14 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>229:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (18 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>244:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM108</code></td>
+      <td>Use ternary operator `slots = list(row.values()) if isinstance(row, dict) else list(row)` instead of `if`-`else`-block</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>284:21</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM102</code></td>
+      <td>Use a single `if` statement instead of nested `if` statements</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>328:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `MAX_PASSATE` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>340:24</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `ore_keys` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\post_ordinary_optimizer.py</code></td>
+      <td>340:34</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF059</code></td>
+      <td>Unpacked variable `is_dict` is never used</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>1:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N999</code></td>
+      <td>Invalid module name: &#39;provaO&#39;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>29:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM103</code></td>
+      <td>Return the negated condition directly</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>49:19</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>57:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>78:28</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>85:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>92:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>161:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`distribuisci_fabbisogno` is too complex (17 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>161:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (16 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>283:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`garantisci_quattro_ore_consecutive` is too complex (14 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>310:36</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>369:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`compattazione_aggressiva` is too complex (29 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>369:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (27 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>369:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (69 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>389:74</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `griglia`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>389:82</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `data`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>394:44</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `griglia`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>394:53</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `data`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>394:76</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `g`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>450:32</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>FURB171</code></td>
+      <td>Membership test against single-item container</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>522:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`riequilibra_giornate` is too complex (28 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>522:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (26 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>522:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (67 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>539:63</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `5` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>540:63</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>556:78</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `griglia`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>556:86</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `data_vuota`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>560:48</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `griglia`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>560:57</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `data_vuota`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>560:86</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `g_vuota`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>588:28</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>FURB171</code></td>
+      <td>Membership test against single-item container</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>660:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`backfill_buchi` is too complex (29 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>660:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (27 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>660:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0915</code></td>
+      <td>Too many statements (67 &gt; 60)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>680:74</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `griglia`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>680:82</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `data`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>684:44</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `griglia`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>684:53</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `data`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>684:76</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>B023</code></td>
+      <td>Function definition does not bind loop variable `g`</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-error">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>735:32</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-error">error</span></td>
+      <td><code>FURB171</code></td>
+      <td>Membership test against single-item container</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>802:1</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>E402</code></td>
+      <td>Module level import not at top of file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>862:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>N806</code></td>
+      <td>Variable `MAX_PASSATE` in function should be lowercase</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\provaO.py</code></td>
+      <td>936:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`recupera_debito_residuo` is too complex (14 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\special_days_handler.py</code></td>
+      <td>11:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`apply_special_days` is too complex (18 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\special_days_handler.py</code></td>
+      <td>11:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (17 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\stage_handler.py</code></td>
+      <td>12:17</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF002</code></td>
+      <td>Docstring contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>10:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0911</code></td>
+      <td>Too many return statements (8 &gt; 6)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>56:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM110</code></td>
+      <td>Use `return all(docente_disponibile(docente_id_norm, giorno_it, i) for i in range(ora, ora + blocco))` instead of `for` loop</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>94:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM110</code></td>
+      <td>Use `return any(row[o] is None and o != ora for o in range(prima, ultima + 1))` instead of `for` loop</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>105:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`compatta_giornata` is too complex (13 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>152:13</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>157:9</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM102</code></td>
+      <td>Use a single `if` statement instead of nested `if` statements</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>182:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`ottimizza_settimana_classe` is too complex (14 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>190:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>207:56</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `4` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>208:52</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `5` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\utils_scheduler.py</code></td>
+      <td>231:25</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM102</code></td>
+      <td>Use a single `if` statement instead of nested `if` statements</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>31:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>38:27</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>126:12</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLW0603</code></td>
+      <td>Using the global statement to update `CLASSI_INFO_CACHE` is discouraged</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>126:31</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLW0603</code></td>
+      <td>Using the global statement to update `CALENDARIO_CACHE` is discouraged</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>144:12</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLW0603</code></td>
+      <td>Using the global statement to update `CALENDARIO_CACHE` is discouraged</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>144:30</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLW0603</code></td>
+      <td>Using the global statement to update `CLASSI_INFO_CACHE` is discouraged</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>155:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>159:20</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PERF102</code></td>
+      <td>When using only the values of a dict use the `values()` method</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>171:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>C901</code></td>
+      <td>`valida_motore` is too complex (29 &gt; 12)</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>171:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR0912</code></td>
+      <td>Too many branches (29 &gt; 15)</td>
+      <td><span class="fix fix-subagent">subagent</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>187:5</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLC0415</code></td>
+      <td>`import` should be at the top-level of a file</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>196:17</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM118</code></td>
+      <td>Use `key in dict` instead of `key in dict.keys()`</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>209:44</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>212:18</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>228:53</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>RUF003</code></td>
+      <td>Comment contains ambiguous `’` (RIGHT SINGLE QUOTATION MARK). Did you mean ``` (GRAVE ACCENT)?</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>272:17</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM118</code></td>
+      <td>Use `key in dict` instead of `key in dict.keys()`</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>277:30</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>PLR2004</code></td>
+      <td>Magic value used in comparison, consider replacing `2` with a constant variable</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>app\utils\validator.py</code></td>
+      <td>291:17</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>SIM102</code></td>
+      <td>Use a single `if` statement instead of nested `if` statements</td>
+      <td><span class="fix fix-auto">auto</span></td>
+    </tr>
+    <tr class="sev-warning">
+      <td><code>config.py</code></td>
+      <td>3:18</td>
+      <td><span class="lang lang-python">python</span></td>
+      <td><span class="sev sev-warning">warning</span></td>
+      <td><code>S105</code></td>
+      <td>Possible hardcoded password assigned to: &quot;SECRET_KEY&quot;</td>
+      <td><span class="fix fix-human">human</span></td>
+    </tr></tbody>
+</table>
+</body></html>

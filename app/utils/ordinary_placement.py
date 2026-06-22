@@ -25,7 +25,7 @@ def prepara_classi_data(classi_info):
 
     classi_data = []
 
-    for cid, info in classi_info.items():
+    for _, info in classi_info.items():
         cd = {}
 
         cd["classe"] = info["classe"]
@@ -96,7 +96,7 @@ def ordinary_placement(cd, docente_ok_wrapper):
 def fase1_calcolo_ore_settimanali(cd):
     settimane = len(cd.get("settimane", {}))
 
-    for mid, info in cd["materie_attive"].items():
+    for _, info in cd["materie_attive"].items():
         ore_annuali = info.get("ore_annuali", 0)
 
         if ore_annuali < 30:
@@ -162,7 +162,7 @@ def _piazza_blocchi_settimanali(cd, docente_ok_wrapper, mid, info, settimana):
 
     # quante ore già piazzate in questa settimana?
     ore_reali = 0
-    for key, griglia in cd["griglie"].items():
+    for _, griglia in cd["griglie"].items():
         for data_g in cd["settimane"][settimana]:
             if data_g in griglia:
                 for slot in griglia[data_g]:
@@ -240,7 +240,7 @@ def _piazza_blocchi_settimanali(cd, docente_ok_wrapper, mid, info, settimana):
         esiste_senza_buco = any(not c[1] for c in candidati)
 
         piazzato = False
-        for score, crea_buco, h, data_g, key, giorno_it in candidati:
+        for _score, crea_buco, h, data_g, key, giorno_it in candidati:
 
             if esiste_senza_buco and crea_buco:
                 continue
@@ -431,7 +431,6 @@ def _piazza_forzato(cd, mid, info):
 
         for g in giorni:
             data_g    = g["data"]
-            giorno_it = g["giorno_it"]
             row       = griglia[data_g]
 
             for h in range(cd["ore_g"]):
@@ -478,8 +477,8 @@ def report_classe(cd):
     ore_residue = sum(info.get("debito_residuo", 0) for info in materie.values())
 
     buchi = 0
-    for key, griglia in cd["griglie"].items():
-        for data_g, row in griglia.items():
+    for _, griglia in cd["griglie"].items():
+        for _, row in griglia.items():
             for h in range(1, cd["ore_g"] - 1):
                 if row[h] is None and row[h-1] is not None and row[h+1] is not None:
                     buchi += 1

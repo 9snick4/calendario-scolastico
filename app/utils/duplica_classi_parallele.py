@@ -2,6 +2,7 @@
 
 from copy import deepcopy
 
+
 def duplica_classi_parallele(calendario, associazioni, doc_est_map):
     """
     Duplica SOLO le materie non professionali.

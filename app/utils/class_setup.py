@@ -1,24 +1,12 @@
 # app/utils/class_setup.py
 
-from datetime import timedelta
 from collections import defaultdict
-
-from app.models import (
-    Classe,
-    MateriaClasse,
-    Materia,
-    AnnoFormativo,
-    GiornoFisso,
-    Docente
-)
-
-from app.utils.orario_utils import (
-    normalizza_giorno_it,
-    label_giorno_it
-)
+from datetime import timedelta
 
 # 🔥 IMPORTA L’UNICA OCCUPAZIONE GLOBALE
 import app.utils.occupazione as occ
+from app.models import AnnoFormativo, Classe, Docente, GiornoFisso, Materia, MateriaClasse
+from app.utils.orario_utils import label_giorno_it, normalizza_giorno_it
 
 
 def prepara_classi():

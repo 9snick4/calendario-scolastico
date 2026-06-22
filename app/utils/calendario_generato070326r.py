@@ -1,35 +1,27 @@
 # app/utils/calendario_generator.py
 
-from .class_setup import prepara_classi
-from .stage_handler import apply_stage
+import app.utils.occupazione as occ
 from app.utils.festivita_handler import apply_festivita
-from .special_days_handler import apply_special_days
-from .fixed_days_handler import apply_fixed_days
-
-
-
-
 from app.utils.orario_utils import (
-    crea_griglia_settimanale,
     costruisci_settimana,
+    crea_griglia_settimanale,
     salva_calendari,
-    sincronizza_classi_associate
 )
-
+from app.utils.ordinary_placement import (
+    _analizza_slot,
+    _applica_cpsat,
+    _fase1_cpsat,
+    _greedy_fallback,
+    prepara_classi_data,
+)
 from app.utils.utils_scheduler import (
     docente_ok_wrapper,
 )
 
-from app.utils.ordinary_placement import (
-    prepara_classi_data,
-    _fase1_cpsat,
-    _applica_cpsat,
-    _greedy_fallback,
-    _analizza_slot
-)
-
-
-import app.utils.occupazione as occ
+from .class_setup import prepara_classi
+from .fixed_days_handler import apply_fixed_days
+from .special_days_handler import apply_special_days
+from .stage_handler import apply_stage
 
 print(">>> VERSIONE PATCHATA DEFINITIVA")
 
@@ -146,14 +138,14 @@ def genera_calendario_annuale():
         for cd in classi_data:
             _greedy_fallback(cd, docente_ok_wrapper)
 
-    
-    
+
+
     # 2) ORDINARIO — CP-SAT GLOBALE SU TUTTE LE CLASSI (UNA SOLA VOLTA)
     piazzamento_ordinario(classi_info, docente_ok_wrapper)
 
 
     # 3) COSTRUISCI SETTIMANE FINALI (CALENDARIO VERO) PER OGNI CLASSE
-    for cid, info in classi_info.items():
+    for _, info in classi_info.items():
         classe = info["classe"]
         settimane_classe = info["settimane_classe"]
         ore_giornaliere = info["ore_giornaliere"]
@@ -177,11 +169,6 @@ def genera_calendario_annuale():
     calendario_per_classe = salva_calendari(classi_info)
 
     # 5) DUPLICAZIONE PARALLELE (ancora opzionale/commentata)
-    from app.utils.associazioni_loader import carica_associazioni_parallele, genera_doc_est_map
-    associazioni = carica_associazioni_parallele()
-    doc_est_map = genera_doc_est_map(associazioni)
-
-    from app.utils.duplica_classi_parallele import duplica_classi_parallele
 
     # if associazioni:
     #     calendario_per_classe = duplica_classi_parallele(
@@ -196,7 +183,7 @@ def genera_calendario_annuale():
 
     # 7) VALIDAZIONE MOTORE SU TUTTE LE CLASSI (UNA ALLA VOLTA)
     errori = []
-    for cid, info in classi_info.items():
+    for _, info in classi_info.items():
         griglie_classe = info.get("griglie")
         settimane_classe = info["settimane_classe"]
         ore_giornaliere = info["ore_giornaliere"]

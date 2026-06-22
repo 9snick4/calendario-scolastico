@@ -1,10 +1,11 @@
 # app/utils/special_days_handler.py
 
+from collections import defaultdict
+
+import app.utils.occupazione as occ
 from app.models import Docente, GiornoSpeciale
 from app.utils.orario_utils import piazza_blocco
-import app.utils.occupazione as occ
-from app.utils.utils_scheduler import docente_ok_wrapper   # ✔ IMPORT CORRETTO
-from collections import defaultdict
+from app.utils.utils_scheduler import docente_ok_wrapper  # ✔ IMPORT CORRETTO
 
 
 def apply_special_days(

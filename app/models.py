@@ -1,5 +1,6 @@
+
 from app import db
-from datetime import date
+
 
 class Classe(db.Model):
     id = db.Column(db.Integer, primary_key=True)

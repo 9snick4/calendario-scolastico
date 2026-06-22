@@ -1,8 +1,8 @@
 # app/utils/utils_scheduler.py
 
-from app.utils.orario_utils import docente_disponibile
 import app.utils.occupazione as occ
 from app.models import Docente
+from app.utils.orario_utils import docente_disponibile
 
 print(">>> LOADING utils_scheduler.py FROM:", __file__)
 

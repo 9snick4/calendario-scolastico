@@ -1,12 +1,13 @@
 # app/utils/ordinary_placement.py
 from datetime import date, datetime
-from app.utils.orario_utils import piazza_blocco
+
 import app.utils.occupazione as occ
+from app.utils.orario_utils import piazza_blocco
 
 # ──────────────────────────────────────────────────────────────
 # CONFIGURAZIONE
 # ──────────────────────────────────────────────────────────────
-MAX_ORE_DOCENTE_PER_GIORNO = 2 
+MAX_ORE_DOCENTE_PER_GIORNO = 2
 
 def get_minimo_ore(data_g):
     if not isinstance(data_g, date):
@@ -22,46 +23,46 @@ def docente_disponibile_global(docente_id, data, ora, giorno_it=None, docente_ok
     Verifica se il docente è LIBERO in tutto l'istituto.
     Viene chiamata anche da special_days_handler e optimizer.
     """
-    if not docente_id or docente_id == "DOC EST": 
+    if not docente_id or docente_id == "DOC EST":
         return True
-        
+
     # 1. Verifica sovrapposizioni in altre classi
-    if not occ.docente_libero(docente_id, data, ora): 
+    if not occ.docente_libero(docente_id, data, ora):
         return False
-    
+
     # 2. Verifica desiderata (se forniti)
     if docente_ok:
         if not giorno_it:
             dt = data if isinstance(data, (date, datetime)) else datetime.strptime(data, "%Y-%m-%d")
             giorno_it = dt.strftime('%A')
-        if not docente_ok(docente_id, data, giorno_it, ora, 1): 
+        if not docente_ok(docente_id, data, giorno_it, ora, 1):
             return False
-            
+
     return True
 
 # ──────────────────────────────────────────────────────────────
 # VALIDAZIONE INSERIMENTO
 # ──────────────────────────────────────────────────────────────
 
-def valida_inserimento(docente_id, materia_id, data_dest, ora_dest, n_ore, 
+def valida_inserimento(docente_id, materia_id, data_dest, ora_dest, n_ore,
                       griglia_dest, classe_id, docente_ok, materie_info):
     row_dest = griglia_dest[data_dest]
-    giorno_it = data_dest.strftime('%A') 
+    giorno_it = data_dest.strftime('%A')
 
     for h in range(ora_dest, ora_dest + n_ore):
         if h >= len(row_dest) or row_dest[h] is not None: return False
-        
+
         # Controllo incrociato: il docente è libero in altre classi?
         if not docente_disponibile_global(docente_id, data_dest, h, giorno_it, docente_ok):
             return False
-            
+
         if occ.classe_occupata(classe_id, data_dest, h): return False
 
     if docente_id:
         # Conta ore già fatte in questa classe oggi
         ore_gia = sum(1 for s in row_dest if isinstance(s, dict) and s.get("docente_id") == docente_id)
         if ore_gia + n_ore > MAX_ORE_DOCENTE_PER_GIORNO: return False
-        
+
     return True
 
 # ──────────────────────────────────────────────────────────────
@@ -79,38 +80,38 @@ def esegui_generazione_compatta(griglie, settimane_classe, classe, materie_info,
         row = griglie[key][data_g]
         if any(s and s.get("tipo") in ("STAGE", "FESTA") for s in row): continue
         target = get_minimo_ore(data_g)
-        
+
         tentativi = 0
         while sum(1 for s in row if s is not None) < target and tentativi < 10:
             tentativi += 1
-            
+
             # PREPARAZIONE CANDIDATI (Risolve il KeyError: 'materia_id')
             candidati = []
             for mid, info in materie_info.items():
                 if info.get('debito_residuo', 0) > 0:
                     candidati.append((mid, info))
-            
+
             # Priorità a chi ha più debito
             candidati.sort(key=lambda x: x[1]['debito_residuo'], reverse=True)
-            
+
             piazzato_nel_ciclo = False
             for mid, info in candidati:
                 did = info.get("docente_id")
                 # Quante ore servono per arrivare al target?
                 n_richieste = min(info["debito_residuo"], info.get("blocco_orario", 1), target - sum(1 for s in row if s is not None))
-                
+
                 # Cerchiamo il primo slot libero (consecutive)
                 for start in range(ore_max_g - n_richieste + 1):
-                    if valida_inserimento(did, mid, data_g, start, n_richieste, 
+                    if valida_inserimento(did, mid, data_g, start, n_richieste,
                                          griglie[key], classe.id, docente_ok, materie_info):
                         piazza_blocco(griglie[key], data_g, start, n_richieste, info["nome"], info.get("docente_nome", ""),
                                      did, None, classe_id=classe.id, materia_id=mid,
                                      tipo="ORDINARIO", origine="ordinario")
-                        
+
                         # OCCUPA NEL REGISTRO GLOBALE ISTANTANEAMENTE
                         for h in range(start, start + n_richieste):
                             if did: occ.occupa(did, classe.id, data_g, h)
-                        
+
                         info["debito_residuo"] -= n_richieste
                         info["ore_assegnate"] += n_richieste
                         piazzato_nel_ciclo = True
@@ -128,10 +129,10 @@ def final_cleanup_safe(griglie, ore_max, materie_info, classe_id):
         for data in list(griglie[key].keys()):
             row = griglie[key][data]
             if not row or any(s and s.get("tipo") in ("STAGE", "FESTA") for s in row): continue
-            
+
             target = get_minimo_ore(data)
             ore_presenti = [s for s in row if s is not None]
-            
+
             if not ore_presenti: continue
 
             # Se < target, svuota e restituisci debito (solo se non è fine anno)
@@ -150,7 +151,7 @@ def final_cleanup_safe(griglie, ore_max, materie_info, classe_id):
             # Compattazione protetta
             for h, s in enumerate(row):
                 if s and s.get("docente_id"): occ.libera(s["docente_id"], data, h)
-            
+
             nuova_row = [None] * ore_max
             pos = 0
             for s in ore_presenti:
@@ -173,11 +174,11 @@ def final_cleanup_safe(griglie, ore_max, materie_info, classe_id):
 # ENTRY POINT
 # ──────────────────────────────────────────────────────────────
 
-def apply_ordinary(griglie, settimane_classe, classe, materie_info, materie_dict, 
+def apply_ordinary(griglie, settimane_classe, classe, materie_info, materie_dict,
                    docenti_dict, occupazione_docenti, docente_ok):
-    
+
     ore_max = classe.ore_massime_giornaliere or 6
-    
+
     # 1. Init e caricamento occupazioni esistenti (da special days)
     for key in settimane_classe:
         for data in griglie[key]:

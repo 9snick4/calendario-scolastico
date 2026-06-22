@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.models import db, Festivita
 from datetime import datetime
+
+from app.models import Festivita, db
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 festivita_bp = Blueprint("festivita", __name__, url_prefix="/festivita")
 

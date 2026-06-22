@@ -1,8 +1,8 @@
 import os
-import openpyxl
 from datetime import datetime
-from flask import current_app
 
+import openpyxl
+from flask import current_app
 
 # ============================================================
 #   DIAGNOSTICA SOVRAPPOSIZIONI (XLS FINALE)
@@ -12,7 +12,7 @@ def diagnostica_sovrapposizioni(calendario_per_classe):
     conflitti = []
     occupazione = {}  # occupazione[docente][data][ora] = [classi]
 
-    for classe_id, dati in calendario_per_classe.items():
+    for _, dati in calendario_per_classe.items():
         nome_classe = dati["nome_classe"]
 
         for giorno in dati["calendario"]:
@@ -199,7 +199,7 @@ def diagnostica_globale(classi_data, docente_ok_wrapper):
         ore_piazzate_classe = 0
         ore_residue_classe = 0
 
-        for mid, info in materie.items():
+        for _, info in materie.items():
             nome = info["nome"]
             ore_ann = info.get("ore_annuali", 0)
             assegnate = info.get("ore_assegnate", 0)

@@ -1,8 +1,10 @@
 # app/utils/validator.py
 
 from collections import defaultdict
+
 from app.models import Docente
 from app.utils.validator_html import render_html_report
+
 #from app.utils.utils_scheduler import crea_buco_in_giornata
 
 
@@ -26,14 +28,14 @@ def valida_griglia_reale(classi_info):
     conflitti = []
     mappa = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
-    for cid, info in classi_info.items():
+    for _, info in classi_info.items():
         classe = info["classe"]
         griglie = info.get("griglie")
 
         if not griglie:
             continue
 
-        for key, griglia in griglie.items():
+        for _, griglia in griglie.items():
             for data, ore in griglia.items():
                 for ora, slot in enumerate(ore):
                     if isinstance(slot, dict) and slot.get("docente_id"):
@@ -154,7 +156,7 @@ def aggiorna_occupazione_post_sync(calendario_per_classe):
 
     OCCUPAZIONE_DOCENTI_GLOBALE.clear()
 
-    for cid, info in calendario_per_classe.items():
+    for _, info in calendario_per_classe.items():
         calendario = info["calendario"]
         for giorno in calendario:
             data = giorno["data"]

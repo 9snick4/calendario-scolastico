@@ -1,6 +1,6 @@
 # app/utils/diagnostica_docenti.py
 
-from app.models import Classe, MateriaClasse, Docente, Materia
+from app.models import Classe, Docente, Materia, MateriaClasse
 
 
 def diagnostica_docenti_mancanti():

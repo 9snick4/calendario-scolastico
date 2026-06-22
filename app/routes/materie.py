@@ -1,5 +1,5 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
-from app.models import db, Materia
+from app.models import Materia, db
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 
 materie_bp = Blueprint("materie", __name__, url_prefix="/materie")
 

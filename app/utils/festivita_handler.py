@@ -1,5 +1,5 @@
-from app.models import Festivita
 import app.utils.occupazione as occ
+from app.models import Festivita
 
 
 def giorno_in_festivita(data):
